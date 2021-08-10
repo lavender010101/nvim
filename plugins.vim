@@ -17,7 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
 	
 	" === status line ===
 	Plug 'lavender010101/eleline.vim'
-	Plug 'ojroques/vim-scrollstatus'
+	" Plug 'ojroques/vim-scrollstatus'
 
 	" === tag line ===
     Plug 'mg979/vim-xtabline'
