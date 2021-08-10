@@ -28,7 +28,7 @@ noremap <LEADER><CR> :nohlsearch<CR>
 
 
 " ===
-" ==== visual enhance
+" ==== editor enhance
 " ===
 " >>>>> theme >>>>>
 " show cursorline
@@ -121,6 +121,28 @@ set foldmethod=indent
 set wrap
 set colorcolumn=100
 " <<<<< fold <<<<<
+
+" >>>>> mouse >>>>>
+" options: a->Normal v->Visual i->Insert c->Command h->Help a->nvich(All)
+set mouse=a
+" <<<<< mouse <<<<<
+
+
+" >>>>> auto reload >>>>>
+set autoread
+" <<<<< auto reload <<<<<
+
+
+" >>>>> history >>>>>
+" auto jump to the line last exited
+if has("autocmd")
+	autocmd BufReadPost *
+				\ if line("'\"") <= line("$") |
+				\ exe "normal g`\"" |
+				\ endif
+endif
+" <<<<< history <<<<<
+
 
 
 
