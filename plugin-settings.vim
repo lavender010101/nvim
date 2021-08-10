@@ -13,7 +13,11 @@ let g:xtabline_settings.last_open_first = 1
 
 au BufEnter * exec "call SetBufferName()"
 func! SetBufferName()
-	call xtabline#cmds#run("name_tab", expand('%:p:h'))
+	let s:file_name=expand('%')
+	let s:file_path=expand('%:p:h:t')
+	let s:buffer_title=s:file_path.'/'.s:file_name
+	" call xtabline#cmds#run("name_tab", expand('%:p:h:t'))
+	call xtabline#cmds#run("name_tab", s:buffer_title)
 endfunc
 
 " === vim-hexokinase ===
