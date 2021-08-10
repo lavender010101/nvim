@@ -66,7 +66,7 @@ hi NonText ctermfg=gray guifg=grey10
 syntax on
 
 " json
-let g:vim_json_syntax_conceal=0
+let g:vim_json_syntax_conceal=0 " unable to hidden the double quote
 
 " <<<<< syntax highlighting <<<<<
 
