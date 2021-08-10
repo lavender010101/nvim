@@ -119,7 +119,7 @@ set foldmethod=indent
 
 " wrap
 set wrap
-set colorcolumn=100
+" set colorcolumn=100
 " <<<<< fold <<<<<
 
 " >>>>> mouse >>>>>

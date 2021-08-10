@@ -20,6 +20,7 @@ func! SetBufferName()
 	call xtabline#cmds#run("name_tab", s:buffer_title)
 endfunc
 
+
 " === vim-hexokinase ===
 " options: 'virtual' 'sign_column' 'foreground[full]' 'background[full]'
 let g:Hexokinase_highlighters = ['backgroundfull']
@@ -43,6 +44,16 @@ nmap <A-j> <Plug>MoveBlockDown
 nmap <A-k> <Plug>MoveBlockUp
 nmap <A-h> <Plug>MoveBlockLeft
 nmap <A-l> <Plug>MoveBlockRight
+
+
+" === tcomment_vim ===
+nnoremap ci cl
+let g:tcomment_textobject_inlinecomment = ''
+nmap <LEADER>cn g>c
+vmap <LEADER>cn g>
+nmap <LEADER>cu g<c
+vmap <LEADER>cu g<
+
 
 
 " ===
@@ -76,8 +87,6 @@ let g:vmt_cycle_list_item_markers = 1
 let g:vmt_fence_text = 'TOC'
 let g:vmt_fence_closing_text = '/TOC'
 
-" === snippets 
-source $HOME/.config/nvim/snippets/markdown.vim
 " <<<<< markdown files <<<<<
 
 

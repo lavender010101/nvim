@@ -105,3 +105,11 @@ endfunction
 
 
 
+
+" Remap for do codeAction of selected region
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>aw  <Plug>(coc-codeaction-selected)w
+
+function! s:cocActionsOpenFromSelected(type) abort
+  execute 'CocCommand actions.open ' . a:type
+endfunction
