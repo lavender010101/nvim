@@ -59,6 +59,10 @@ call plug#begin('~/.config/nvim/plugged')
 	
 	" === selection ===
 	Plug 'gcmt/wildfire.vim' " in Visual mode, type k' to select all text in '', or type k) k] k} kp
+	" === move code block ===
+	Plug 'matze/vim-move' " move the selected code blocks/lines
+
+
 	" <<<<< code efficiency <<<<<
 
 	" >>>>> statistic >>>>>

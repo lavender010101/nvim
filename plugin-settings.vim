@@ -1,5 +1,5 @@
 " ===
-" ==== visual enhance
+" ==== editor enhance
 " ===
 " === rainbow ===
 let g:rainbow_active = 1
@@ -24,6 +24,19 @@ let g:Illuminate_delay = 750
 hi illuminateWord cterm=undercurl gui=undercurl
 
 
+" === vim-move ===
+let g:move_map_keys = 0
+" lines
+nmap <A-j> <Plug>MoveLineDown
+nmap <A-k> <Plug>MoveLineUp
+" char
+nmap <A-h> <Plug>MoveCharLeft
+nmap <A-l> <Plug>MoveCharRight
+" code block
+nmap <A-j> <Plug>MoveBlockDown
+nmap <A-k> <Plug>MoveBlockUp
+nmap <A-h> <Plug>MoveBlockLeft
+nmap <A-l> <Plug>MoveBlockRight
 
 
 " ===
