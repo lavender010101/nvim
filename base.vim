@@ -169,6 +169,10 @@ set completeopt=longest,noinsert,menuone,noselect,preview
 " ===
 " >>>>> clipboard >>>>>
 set clipboard=unnamedplus
+" Comunicate vim clipboard and system clipboard
+nnoremap <c-y> "+yy
+vnoremap <c-y> "+yy
+nnoremap <c-p> "*p"
 " <<<<< clipboard <<<<<
 
 
@@ -195,7 +199,7 @@ let g:python3_host_prog = '/opt/miniconda3/bin/python'
 " >>>>> scroll >>>>>
 set ttyfast
 set lazyredraw
-set scrolloff=4
+set scrolloff=4 " keep some line from edge when scrolling
 " <<<<< scroll <<<<<
 " >>>>> message >>>>>
 
@@ -219,5 +223,5 @@ set shortmess+=c
 " ==== default setting
 " ===
 " browser
-let g:browser='chrome' 
+let g:browser='google-chrome-stable'
 " let g:mkdp_browser='chrome' 
