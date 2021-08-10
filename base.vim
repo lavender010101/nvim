@@ -222,6 +222,11 @@ set shortmess+=c
 " ===
 " ==== default setting
 " ===
-" browser
+" === browser ===
 let g:browser='google-chrome-stable'
-" let g:mkdp_browser='chrome' 
+" let g:mkdp_browser='chrome'
+
+" === file encoding ===
+set fileencodings=utf-8,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
