@@ -77,6 +77,8 @@ set relativenumber
 " <<<<< line number <<<<<
 
 " >>>>> status line >>>>>
+" 0->never 1->only if there at least two windows 3->always default:2
+set laststatus=2 " show status line
 " <<<<< status line <<<<<
 
 " >>>>> command window >>>>>

@@ -10,9 +10,11 @@ let g:xtabline_settings.enable_mappings = 0
 let g:xtabline_settings.tabline_modes = ['tabs', 'buffers']
 let g:xtabline_settings.enable_persistance = 0
 let g:xtabline_settings.last_open_first = 1
-noremap to :XTabCycleMode<CR>
-noremap \p :echo expand('%:p')<CR>
 
+au BufEnter * exec "call SetBufferName()"
+func! SetBufferName()
+	call xtabline#cmds#run("name_tab", expand('%:p:h'))
+endfunc
 
 " === vim-hexokinase ===
 " options: 'virtual' 'sign_column' 'foreground[full]' 'background[full]'

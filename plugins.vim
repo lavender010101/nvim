@@ -16,7 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'theniceboy/nvim-deus'
 	
 	" === status line ===
-	Plug 'theniceboy/eleline.vim'
+	Plug 'lavender010101/eleline.vim'
 	Plug 'ojroques/vim-scrollstatus'
 
 	" === tag line ===
