@@ -30,14 +30,14 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'ryanoasis/vim-devicons'
 	" <<<<< theme <<<<<
 
-	" >>>>> syntax highlighting >>>>>
-	Plug 'RRethy/vim-hexokinase', {'do': 'make hexokinase'}
-	Plug 'RRethy/vim-illuminate'
+	" >>>>> highlighting >>>>>
+	Plug 'RRethy/vim-hexokinase', {'do': 'make hexokinase'} " display the colors in the file
+	Plug 'RRethy/vim-illuminate' " highlighting the word under the cursor
 	" indent line
-	Plug 'Yggdroot/indentLine'
+	Plug 'Yggdroot/indentLine' " show indent lines
 	" rainbow brackets
     Plug 'luochen1990/rainbow'
-	" <<<<< syntax highlighting <<<<<
+	" <<<<< highlighting <<<<<
 
 
 

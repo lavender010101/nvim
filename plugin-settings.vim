@@ -14,13 +14,9 @@ noremap to :XTabCycleMode<CR>
 noremap \p :echo expand('%:p')<CR>
 
 
-
-
-
-
-
-
-
+" === vim-hexokinase ===
+" options: 'virtual' 'sign_column' 'foreground[full]' 'background[full]'
+let g:Hexokinase_highlighters = ['backgroundfull']
 
 
 
