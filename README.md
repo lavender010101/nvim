@@ -8,4 +8,12 @@ You need to install the dependencies when you're using `vim-instant-markdown`
 alteratively:
 	* `pip install --user sdmv`
 * Add the following into `init.vim`, for `vim-plug`, you need to write `Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}`
-  
+
+
+
+### Introduction Items
+
+- [ ] plugins introduce
+- [ ] key maps
+- [ ] dependencies
+- [ ] files
