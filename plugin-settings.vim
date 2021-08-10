@@ -81,6 +81,8 @@ let g:instant_markdown_slow = 0
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_autoscroll = 1
 
+let g:mkdp_browser='google-chrome-stable'
+
 " === vim-markdown-toc ===
 let g:vmt_auto_update_on_save = 0
 let g:vmt_cycle_list_item_markers = 1
