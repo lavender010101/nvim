@@ -57,6 +57,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " transparent
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+" autocmd vimenter * hi Normal guibg=grey10 ctermbg=grey10
 hi NonText ctermfg=gray guifg=grey10
 " <<<<< theme <<<<<
 
@@ -79,6 +80,8 @@ set relativenumber
 " >>>>> status line >>>>>
 " 0->never 1->only if there at least two windows 3->always default:2
 set laststatus=2 " show status line
+
+
 " <<<<< status line <<<<<
 
 " >>>>> command window >>>>>
