@@ -6,6 +6,7 @@ let g:coc_global_extensions = [
 	\ 'coc-css',
 	\ 'coc-diagnostic',
 	\ 'coc-explorer',
+	\ 'coc-git',
 	\ 'coc-gitignore',
 	\ 'coc-html',
 	\ 'coc-java',
