@@ -6,7 +6,6 @@ let g:coc_global_extensions = [
 	\ 'coc-css',
 	\ 'coc-diagnostic',
 	\ 'coc-explorer',
-	\ 'coc-git',
 	\ 'coc-gitignore',
 	\ 'coc-html',
 	\ 'coc-java',
@@ -23,6 +22,7 @@ let g:coc_global_extensions = [
 	\ 'coc-yaml',
 	\ 'coc-yank',
 	\]
+	" \ 'coc-git',
 	" \ 'coc-eslint',
 	" \ 'coc-flutter-tools',
 	" \ 'coc-prisma',

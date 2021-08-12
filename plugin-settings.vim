@@ -14,11 +14,42 @@ let g:xtabline_settings.last_open_first = 1
 au BufEnter * exec "call SetBufferName()"
 func! SetBufferName()
 	let s:file_name=expand('%')
-	let s:file_path=expand('%:p:h:t')
-	let s:buffer_title=s:file_path.'/'.s:file_name
+	" let s:file_path=expand('%:p:h:t')
+	" let s:buffer_title=s:file_path.'/'.s:file_name
 	" call xtabline#cmds#run("name_tab", expand('%:p:h:t'))
-	call xtabline#cmds#run("name_tab", s:buffer_title)
+	call xtabline#cmds#run("name_tab", s:file_name)
 endfunc
+
+
+" === spaceline.vim ===
+let g:spaceline_seperate_style = 'arrow-fade'
+
+" let g:spaceline_colorscheme = 'deus'
+let g:spaceline_colorscheme = 'default'
+
+let g:spaceline_lsp_executive = 'coc'
+" side bar 
+let g:spaceline_diff_tool = 'git-gutter'
+
+" syntax check
+" let g:spaceline_diagnostic_errorsign = '❌ '
+" let g:spaceline_diagnostic_warnsign = '⚠ '
+" let g:spaceline_diagnostic_oksign
+
+" vim status
+
+" let g:spaceline_custom_vim_status = {
+" 			\ "n": "NORMAL ",
+" 			\ "V":"VISUAL ",
+" 			\ "v":"VISUAL ",
+" 			\ "\<C-v>": "VISUAL ",
+" 			\ "i":"INSERT ",
+" 			\ "R":"🅡 ",
+" 			\ "s":"SELECT ",
+" 			\ "t":"🅣 ",
+" 			\ "c":"COMMAND ",
+" 			\ "!":"SE"
+" 			\ }
 
 
 " === vim-hexokinase ===
@@ -32,18 +63,19 @@ hi illuminateWord cterm=undercurl gui=undercurl
 
 
 " === vim-move ===
-let g:move_map_keys = 0
-" lines
-nmap <A-j> <Plug>MoveLineDown
-nmap <A-k> <Plug>MoveLineUp
-" char
-nmap <A-h> <Plug>MoveCharLeft
-nmap <A-l> <Plug>MoveCharRight
-" code block
-nmap <A-j> <Plug>MoveBlockDown
-nmap <A-k> <Plug>MoveBlockUp
-nmap <A-h> <Plug>MoveBlockLeft
-nmap <A-l> <Plug>MoveBlockRight
+" let g:move_map_keys = 0
+" " let g:move_key_modifier = 'alt'
+" " lines
+" nmap <A-j> <Plug>MoveLineDown
+" nmap <A-k> <Plug>MoveLineUp
+" " char
+" nmap <A-h> <Plug>MoveCharLeft
+" nmap <A-l> <Plug>MoveCharRight
+" " code block
+" vmap <A-j> <Plug>MoveBlockDown
+" vmap <A-k> <Plug>MoveBlockUp
+" vmap <A-h> <Plug>MoveBlockLeft
+" vmap <A-l> <Plug>MoveBlockRight
 
 
 " === tcomment_vim ===
@@ -105,7 +137,7 @@ let g:vmt_fence_closing_text = '/TOC'
 " === tools
 " ===
 " >>>>> git tools >>>>>
-" === gitgutter ===
+" === vim-gitgutter ===
 let g:gitgutter_sign_allow_clobber = 0
 let g:gitgutter_map_keys = 0
 let g:gitgutter_override_sign_column_highlight = 0
