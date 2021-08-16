@@ -27,12 +27,50 @@
     "value": "\uf89f",
     "variable": "\ue71b"
   },
-  /* Python path */
+  /*
+   * ===
+   * ==== python config
+   * ===
+   */
   "python.pythonPath": "/opt/miniconda3/bin/python",
   "python.venvPath": "/opt/miniconda3/bin/python",
   "python.condaPath": "/opt/miniconda3/bin/conda",
+  "python.autoComplete.addBrackets": true,
+  "python.jediEnabled": false,
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfArgs": [
+  	"--style",
+  	"{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 1}"
+  ],
 
-  // Show Info
+
+  /*
+   * ===
+   * ==== html css javascript
+   * ===
+   */
+  // === coc-html ===
+  "html.enable": true,
+  "html.format.enable": true,
+  // === coc-js ===
+  "javascript.referencesCodeLens.enable": true,
+  "javascript.showUnused": true,
+  "javascript.suggest.names": true,
+  "javascript.suggestionActions.enabled": true,
+
+
+  /*
+   * ===
+   * ==== coc-json
+   * ===
+   */
+  "json.format.enable": true,
+
+  /*
+   * ===
+   * ==== coc-diagnostic
+   * ===
+   */
   "diagnostic.signOffset": 1,
   "diagnostic.errorSign": "\uf467",
   "diagnostic.warningSign": "\uf071",
@@ -44,23 +82,45 @@
   "diagnostic.checkCurrentLine": true,
   "diagnostic.virtualTextPrefix": " ❯❯❯ ",
   "diagnostic.virtualText": true,
+  "diagnostic-languageserver.filetypes": {
+		"vim": "vint",
+		"email": "languagetool",
+		"markdown": ["write-good", "markdownlint"],
+		"sh": "shellcheck",
+		"elixir": ["mix_credo", "mix_credo_compile"],
+		"eelixir": ["mix_credo", "mix_credo_compile"],
+		"php": ["phpstan", "psalm"]
+	},
+	"diagnostic-languageserver.formatFiletypes": {
+		"elixir": "mix_format",
+		"eelixir": "mix_format"
+	},
+
+
   "codeLens.enable": true,
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
+	"c",
+	"css",
+	"cpp",
+	"html",
+	"go",
+	"java",
+	"javascript",
+	"json",
+	"prisma",
+	"python",
+	"svelte",
     "typescript",
-    "html",
-    "css",
-    "json",
-    "python",
-    "vue",
-    "svelte",
-    "c",
-    "prisma",
-    "java",
-    "cpp"
+    "vue"
   ],
 
+
+  /*
+   * ===
+   * ==== coc-explorer
+   * ===
+   */
   "explorer.width": 38,
   "explorer.quitOnOpen": true,
   "explorer.sources": [
@@ -124,6 +184,20 @@
     ">>": "gitUnstage"
   },
 
+
+  /*
+   * ===
+   * ==== coc-prettier
+   * ===
+   */
+  "prettier.printWidth": 100,
+	"prettier.eslintIntegration": true,
+	"prettier.disableLanguages": [],
+	"prettier.formatterPriority": 1,
+	"prettier.useTabs": true,
+	"prettier.trailingComma": "all",
+	"prettier.singleQuote": false,
+
   "snippets.ultisnips.directories": [
     "$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
   ],
@@ -140,15 +214,35 @@
   // "clangd.path": "/home/lavender111/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
 
   "languageserver": {
-    "clangd": {
-      "command": "clangd",
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-    },
     "bash": {
       "command": "bash-language-server",
       "args": ["start"],
       "filetypes": ["sh"]
-    }
+    },
+	"ccls": {
+	  "command": "ccls",
+	  "filetypes": ["c","cpp","cuda","bojc","objcpp"],
+	  "rootPatterns": [".ccls", ".ccls-root", "compile_commands.json", ".git/", ".hg/"],
+	  "initializationOptions": {
+		"cache": {
+		  "directory": "/tmp/ccls"
+	    }
+	  }
+    },
+	// "clangd": {
+	//   "command": "clangd",
+	//   "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+	//   "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+	// },
+	"golang":{
+	  "command": "gopls",
+	  "rootPatterns": ["go.mod"],
+	  "filetypes": ["go"],
+	  "initializationOptions": {
+		"gocodeCompletionEnable":true,
+		"diagnosticsEnable":true,
+		"lintTool": "golint"
+	  }
+	}
   }
 }
