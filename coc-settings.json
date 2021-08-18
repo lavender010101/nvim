@@ -1,5 +1,24 @@
 {
   "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.semanticTokensHighlights": false,
+  "coc.preferences.enableFloatHighlight": true,
+  "coc.preferences.snippetStatusText": "Ⓢ ",
+  "coc.preferences.messageLevel": "error",
+  "coc.source.around.firstMatch": false,
+  "coc.source.buffer.firstMatch": false,
+  "coc.source.syntax.firstMatch": false,
+  "suggest.detailMaxLength": 60,
+  "suggest.noselect": true,
+  "suggest.enablePreselect": false,
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.autoTrigger": "always",
+  "suggest.timeout": 5000,
+  "suggest.enablePreview": true,
+  "suggest.floatEnable": true,
+  "suggest.detailField": "preview",
+  "suggest.snippetIndicator": "",
+  "suggest.triggerCompletionWait": 100,
+  "suggest.echodocSupport": true,
   "suggest.completionItemKindLabels": {
     "class": "\uf0e8",
     "color": "\ue22b",
@@ -64,6 +83,7 @@
    * ==== coc-json
    * ===
    */
+  "json.enable":true,
   "json.format.enable": true,
 
   /*
@@ -184,6 +204,14 @@
     ">>": "gitUnstage"
   },
 
+  /*
+   * ===
+   * ==== coc-lists
+   * ===
+   */
+  "list.previewHighlightGroup": "Statement",
+  "list.nextKeymap": "<C-j>",
+  "list.previousKeymap": "<C-k>",
 
   /*
    * ===
@@ -191,12 +219,12 @@
    * ===
    */
   "prettier.printWidth": 100,
-	"prettier.eslintIntegration": true,
-	"prettier.disableLanguages": [],
-	"prettier.formatterPriority": 1,
-	"prettier.useTabs": true,
-	"prettier.trailingComma": "all",
-	"prettier.singleQuote": false,
+  "prettier.eslintIntegration": true,
+  "prettier.disableLanguages": [],
+  "prettier.formatterPriority": 1,
+  "prettier.useTabs": true,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": false,
 
   "snippets.ultisnips.directories": [
     "$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
@@ -214,21 +242,11 @@
   // "clangd.path": "/home/lavender111/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
 
   "languageserver": {
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"]
-    },
-	"ccls": {
-	  "command": "ccls",
-	  "filetypes": ["c","cpp","cuda","bojc","objcpp"],
-	  "rootPatterns": [".ccls", ".ccls-root", "compile_commands.json", ".git/", ".hg/"],
-	  "initializationOptions": {
-		"cache": {
-		  "directory": "/tmp/ccls"
-	    }
-	  }
-    },
+    // "bash": {
+    //   "command": "bash-language-server",
+    //   "args": ["start"],
+    //   "filetypes": ["sh"]
+    // },
 	// "clangd": {
 	//   "command": "clangd",
 	//   "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
@@ -243,6 +261,11 @@
 		"diagnosticsEnable":true,
 		"lintTool": "golint"
 	  }
-	}
+	},
+	"sql": {
+    "command": "sql-language-server",
+    "args" : ["up", "--method", "stdio"],
+    "filetypes": ["sql", "mysql"]
+    }
   }
 }

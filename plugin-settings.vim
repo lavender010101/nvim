@@ -28,7 +28,7 @@ let g:spaceline_seperate_style = 'arrow-fade'
 let g:spaceline_colorscheme = 'default'
 
 let g:spaceline_lsp_executive = 'coc'
-" side bar 
+" side bar
 let g:spaceline_diff_tool = 'git-gutter'
 
 " syntax check

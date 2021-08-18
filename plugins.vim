@@ -13,13 +13,16 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" >>>>> theme >>>>>
 	" === color ===
-	Plug 'theniceboy/nvim-deus'
+	" Plug 'theniceboy/nvim-deus'
+	" Plug 'ajmwagar/vim-deus'
+	Plug 'morhetz/gruvbox'
 	
 	" === status line ===
 	" Plug 'lavender010101/eleline.vim'
+	" Plug 'theniceboy/eleline.vim'
 	" Plug 'ojroques/vim-scrollstatus'
-	" Plug 'lavender010101/spaceline.vim'
-	Plug 'glepnir/spaceline.vim'
+	Plug 'lavender010101/spaceline.vim'
+	" Plug 'glepnir/spaceline.vim'
 
 	" === tag line ===
     Plug 'mg979/vim-xtabline'

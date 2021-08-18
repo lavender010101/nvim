@@ -1,8 +1,9 @@
 " ===
 " ==== install extensions
 " ===
-" >>>>> global extensions >>>>>
+" >>>>> auto download extensions >>>>>
 let g:coc_global_extensions = [
+	\ 'coc-clangd',
 	\ 'coc-css',
 	\ 'coc-diagnostic',
 	\ 'coc-explorer',
@@ -13,11 +14,14 @@ let g:coc_global_extensions = [
 	\ 'coc-lists',
 	\ 'coc-prettier',
 	\ 'coc-python',
+	\ 'coc-pyright',
+	\ 'coc-sh',
 	\ 'coc-snippets',
 	\ 'coc-sourcekit',
 	\ 'coc-syntax',
 	\ 'coc-translator',
 	\ 'coc-tsserver',
+	\ 'coc-vetur',
 	\ 'coc-vimlsp',
 	\ 'coc-yaml',
 	\ 'coc-yank',
@@ -32,7 +36,6 @@ let g:coc_global_extensions = [
 	" \ 'coc-tailwindcss',
 	" \ 'coc-tasks',
 	" \ 'coc-tslint-plugin',
-	" \ 'coc-vetur',
 	
 " <<<<< global extensions
 

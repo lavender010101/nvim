@@ -35,7 +35,10 @@ noremap <LEADER><CR> :nohlsearch<CR>
 set cursorline
 
 " color
-color deus
+" color deus
+" color onedark
+color gruvbox
+let g:gruvbox_termcolors=16
 set termguicolors " enable true colors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
