@@ -19,6 +19,7 @@ let g:coc_global_extensions = [
 	\ 'coc-snippets',
 	\ 'coc-sourcekit',
 	\ 'coc-syntax',
+	\ 'coc-tailwindcss',
 	\ 'coc-translator',
 	\ 'coc-tsserver',
 	\ 'coc-vetur',
@@ -26,6 +27,7 @@ let g:coc_global_extensions = [
 	\ 'coc-yaml',
 	\ 'coc-yank',
 	\]
+	" \ 'https://github.com/rodrigore/coc-tailwind-intellisense'
 	" \ 'coc-git',
 	" \ 'coc-eslint',
 	" \ 'coc-flutter-tools',
