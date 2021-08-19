@@ -71,8 +71,9 @@ call plug#begin('~/.config/nvim/plugged')
 	" <<<<< code efficiency <<<<<
 
 	" >>>>> tags >>>>>
-	Plug 'liuchengxu/vista.vim'	
+	Plug 'liuchengxu/vista.vim'
 	" <<<<< tags <<<<<
+	
 	" >>>>> statistic >>>>>
 	Plug 'wakatime/vim-wakatime'
 	" <<<<< statistic <<<<<
