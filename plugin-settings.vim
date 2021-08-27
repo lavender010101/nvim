@@ -63,10 +63,8 @@ let g:vista#renderer#icons = {
 \   "function": "\uf794",
 \   "variable": "\uf71b",
 \  }
-let g:vista_executive_for = {
-  \ 'cpp': 'vim_lsp',
-  \ 'php': 'vim_lsp',
-  \ }
+
+
 " === vim-hexokinase ===
 " options: 'virtual' 'sign_column' 'foreground[full]' 'background[full]'
 let g:Hexokinase_highlighters = ['backgroundfull']

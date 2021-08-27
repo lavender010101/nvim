@@ -110,7 +110,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== html
 	" ===
-    Plug 'othree/html5.vim'
+    " Plug 'othree/html5.vim'
     Plug 'alvan/vim-closetag'
 
 
@@ -133,7 +133,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== markdown
 	" ===
-	Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
+	Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 	Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
 
 
