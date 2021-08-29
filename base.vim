@@ -26,7 +26,6 @@ noremap <LEADER><CR> :nohlsearch<CR>
 
 
 
-
 " ===
 " ==== editor enhance
 " ===
