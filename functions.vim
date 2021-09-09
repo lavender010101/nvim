@@ -1,9 +1,9 @@
 " ===
 " ==== compile and run current code
 " ===
-noremap r :call CompileAndRun()<CR>
+noremap r :call RunOrPreview()<CR>
 
-func! CompileAndRun()
+func! RunOrPreview()
 	exec "w"
 
 	if &filetype == 'c'
