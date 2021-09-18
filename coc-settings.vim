@@ -107,4 +107,14 @@ let g:snips_author = 'lavender010101'
 " ===
 " ==== coc-translator
 " ===
+" popup
 nmap ts <Plug>(coc-translator-p)
+vmap ts <Plug>(coc-translator-pv)
+" nmap tsp <Plug>(coc-translator-p)
+" vmap tsp <Plug>(coc-translator-pv)
+" " echo
+" nmap tse <Plug>(coc-translator-e)
+" vmap tse <Plug>(coc-translator-ev)
+" " replace
+" nmap tsr <Plug>(coc-translator-r)
+" vmap tsr <Plug>(coc-translator-rv)
