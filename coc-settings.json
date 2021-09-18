@@ -127,6 +127,10 @@
    	"youdao",
    	"haici"
    ],
+   "translator.toLang": [
+	   "en",
+	   "zh_CN"
+   ],
 
   "codeLens.enable": true,
   "coc.preferences.formatOnType": true,
