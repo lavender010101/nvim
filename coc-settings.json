@@ -116,6 +116,17 @@
 		"eelixir": "mix_format"
 	},
 
+  /*
+   * ===
+   * ==== coc-translator
+   * ===
+   */
+   "translator.engines": [
+   	"bing",
+   	//"google",
+   	"youdao",
+   	"haici"
+   ],
 
   "codeLens.enable": true,
   "coc.preferences.formatOnType": true,
