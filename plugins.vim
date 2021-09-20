@@ -68,6 +68,10 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'matze/vim-move' " move the selected code blocks/lines
 
 
+	" === change conda envs ===
+	" Plug 'cjrh/vim-conda'
+	" Plug 'davidhalter/jedi-vim'
+
 	" <<<<< code efficiency <<<<<
 
 	" >>>>> tags >>>>>
