@@ -48,7 +48,7 @@
   },
   /*
    * ===
-   * ==== python config
+   * ==== coc-python
    * ===
    */
   "python.pythonPath": "/opt/miniconda3/bin/python",
