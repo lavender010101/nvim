@@ -59,7 +59,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " transparent
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-" autocmd vimenter * hi Normal guibg=grey10 ctermbg=grey10
+" autocmd vimenter * hi Normal guibg=grey15
 hi NonText ctermfg=gray guifg=grey10
 " <<<<< theme <<<<<
 
