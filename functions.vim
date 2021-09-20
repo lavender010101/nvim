@@ -59,9 +59,19 @@ endfunc
 
 
 
+" ===
+" ==== toggle to background transparent
+" ===
 
+noremap <LEADER>u :call TurnOnTransparent()<CR>
+noremap <LEADER>i :call TurnOffTransparent()<CR>
+func! TurnOnTransparent()
+	hi Normal guibg=grey15
+endfunction
 
-
+func! TurnOffTransparent()
+	hi Normal guibg=NONE ctermbg=NONE
+endfunction
 
 " ===
 " ==== show help document
