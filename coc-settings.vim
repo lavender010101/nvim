@@ -8,6 +8,7 @@ let g:coc_global_extensions = [
 	\ 'coc-diagnostic',
 	\ 'coc-explorer',
 	\ 'coc-gitignore',
+	\ 'coc-go',
 	\ 'coc-html',
 	\ 'coc-java',
 	\ 'coc-json',

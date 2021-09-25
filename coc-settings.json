@@ -267,16 +267,16 @@
 	//   "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
 	//   "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
 	// },
-	"golang":{
-	  "command": "gopls",
-	  "rootPatterns": ["go.mod"],
-	  "filetypes": ["go"],
-	  "initializationOptions": {
-		"gocodeCompletionEnable":true,
-		"diagnosticsEnable":true,
-		"lintTool": "golint"
-	  }
-	},
+	// "golang":{
+	//   "command": "gopls",
+	//   "rootPatterns": ["go.mod"],
+	//   "filetypes": ["go"],
+	//   "initializationOptions": {
+	// 	// "gocodeCompletionEnable":true,
+	// 	"diagnosticsEnable":true,
+	// 	// "lintTool": "golint"
+	//   }
+	// },
 	"sql": {
     "command": "sql-language-server",
     "args" : ["up", "--method", "stdio"],

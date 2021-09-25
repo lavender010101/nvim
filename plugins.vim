@@ -112,6 +112,12 @@ call plug#begin('~/.config/nvim/plugged')
 
 
 	" ===
+	" ==== go
+	" ===
+	" Plug 'fatih/vim-go'
+
+	
+	" ===
 	" ==== html
 	" ===
     " Plug 'othree/html5.vim'
