@@ -98,10 +98,10 @@ nmap <silent> <LEADER>= <Plug>(coc-diagnostic-next)
 " ==== coc-snippets
 " ===
 imap <C-u> <Plug>(coc-snippets-expand)
-vmap <C-k> <Plug>(coc-snippets-select)
-let g:coc_snippet_next = '<c-k>'
-let g:coc_snippet_prev = '<c-j>'
-imap <C-k> <Plug>(coc-snippets-expand-jump)
+vmap <C-i> <Plug>(coc-snippets-select)
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 let g:snips_author = 'lavender010101'
 
 
