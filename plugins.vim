@@ -145,6 +145,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 	Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
+	Plug 'joker1007/vim-markdown-quote-syntax'
 
 
 	" ===
