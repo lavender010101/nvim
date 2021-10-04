@@ -7,6 +7,10 @@ endif
 
 
 call plug#begin('~/.config/nvim/plugged')
+	" ===
+	" ==== vim plugins supports
+	" ===
+	Plug 'google/vim-maktaba'
 
 	" ===
 	" ==== visual enhancement
@@ -18,18 +22,15 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'morhetz/gruvbox'
 	
 	" === status line ===
-	" Plug 'lavender010101/eleline.vim'
 	" Plug 'theniceboy/eleline.vim'
 	" Plug 'ojroques/vim-scrollstatus'
 	Plug 'lavender010101/spaceline.vim'
-	" Plug 'glepnir/spaceline.vim'
 
 	" === tag line ===
     Plug 'mg979/vim-xtabline'
 
 	" === code formater ===
-	Plug 'google/vim-maktaba'
-	Plug 'google/vim-codefmt'
+	" Plug 'google/vim-codefmt'
 
 	" === file icons ===
     Plug 'ryanoasis/vim-devicons'
@@ -64,7 +65,7 @@ call plug#begin('~/.config/nvim/plugged')
 	
 	" === selection ===
 	Plug 'gcmt/wildfire.vim' " in Visual mode, type k' to select all text in '', or type k) k] k} kp
-	" === move code block ===
+	" === move codes ===
 	Plug 'matze/vim-move' " move the selected code blocks/lines
 
 
@@ -96,8 +97,8 @@ call plug#begin('~/.config/nvim/plugged')
 	
 	" >>>>> version control >>>>>
 	" === git ===
-	Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug']  }
-	Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins'  }
+	" Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug']  }
+	" Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins'  }
     Plug 'airblade/vim-gitgutter'
     " Plug 'cohama/agit.vim'
 	" Plug 'kdheepak/lazygit.nvim'
