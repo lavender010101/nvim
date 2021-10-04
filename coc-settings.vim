@@ -29,8 +29,8 @@ let g:coc_global_extensions = [
 	\ 'coc-yank',
 	\]
 	" \ 'https://github.com/rodrigore/coc-tailwind-intellisense'
-	" \ 'coc-git',
 	" \ 'coc-eslint',
+	" \ 'coc-git',
 	" \ 'coc-flutter-tools',
 	" \ 'coc-prisma',
 	" \ 'coc-pyright',
@@ -119,3 +119,10 @@ vmap ts <Plug>(coc-translator-pv)
 " " replace
 " nmap tsr <Plug>(coc-translator-r)
 " vmap tsr <Plug>(coc-translator-rv)
+
+
+" ===
+" ==== coc-prettier
+" ===
+" command! -nargs=0 Prettier :CocCommand prettier.formatFile
+nmap <C-f> :CocCommand prettier.formatFile<CR>

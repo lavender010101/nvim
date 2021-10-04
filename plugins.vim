@@ -30,7 +30,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'mg979/vim-xtabline'
 
 	" === code formater ===
-	" Plug 'google/vim-codefmt'
+	Plug 'google/vim-codefmt'
 
 	" === file icons ===
     Plug 'ryanoasis/vim-devicons'
@@ -69,9 +69,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'matze/vim-move' " move the selected code blocks/lines
 
 
-	" === change conda envs ===
-	" Plug 'cjrh/vim-conda'
-	" Plug 'davidhalter/jedi-vim'
 
 	" <<<<< code efficiency <<<<<
 
@@ -97,11 +94,7 @@ call plug#begin('~/.config/nvim/plugged')
 	
 	" >>>>> version control >>>>>
 	" === git ===
-	" Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug']  }
-	" Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins'  }
     Plug 'airblade/vim-gitgutter'
-    " Plug 'cohama/agit.vim'
-	" Plug 'kdheepak/lazygit.nvim'
 	
 	" <<<<< version control <<<<<
 	
@@ -109,8 +102,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ==== css
 	" ===
 	Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'yarn install'}
-    Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-
+    Plug 'hail2u/vim-css3-syntax'
 
 	" ===
 	" ==== go
@@ -121,7 +113,6 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== html
 	" ===
-    " Plug 'othree/html5.vim'
     Plug 'alvan/vim-closetag'
 
 
@@ -137,7 +128,6 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== json
 	" ===
-    Plug 'elzr/vim-json'
     Plug 'neoclide/jsonc.vim'
 
 
