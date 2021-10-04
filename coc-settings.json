@@ -133,10 +133,11 @@
 	"explorer.keyMappingMode": "none",
 	"explorer.buffer.showHiddenBuffers": false,
 	"explorer.keyMappings.global": {
-		"h": ["wait", "collapse"],
+		// "h": "GotoParent",
+		"h": ["gotoParent", "collapse"],
 		"j": "nodeNext",
 		"k": "nodePrev",
-		"l": ["wait", "expandable?", "expand", "open"],
+		"l": ["wait", "expandable?", "cd", "open"],
 		"<cr>": ["wait", "expandable?", "expand", "open"],
 		"s": "open:vsplit",
 		"S": "open:split",
