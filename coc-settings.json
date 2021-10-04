@@ -133,22 +133,6 @@
    ],
 
   "codeLens.enable": true,
-  "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-	"c",
-	"css",
-	"cpp",
-	"html",
-	"go",
-	"java",
-	"javascript",
-	"json",
-	"prisma",
-	"python",
-	"svelte",
-    "typescript",
-    "vue"
-  ],
 
 
   /*
@@ -183,9 +167,12 @@
     "gh": "collapseRecursive",
     "l": "open",
     "<cr>": "open",
-    "v": "openInVsplit",
-    "o": "expand",
-    "O": "openInTab",
+	"vsp":"open:vsplit",
+	"sp":"open:split",
+	"o":"open:tab",
+    // "v": "openInVsplit",
+    // "o": "expand",
+    // "O": "openInTab",
     /*"q": "collapse",*/
     "h": "gotoParent",
     "yp": "copyFilepath",
@@ -197,7 +184,7 @@
     "a": "addFile",
     /*	"k": "addFile", */
     "M": "addDirectory",
-    "cw": "rename",
+    "rn": "rename",
     ".": "toggleHidden",
     /*	"zh": "toggleHidden", */
     "R": "refresh",
@@ -235,11 +222,32 @@
    */
   "prettier.printWidth": 100,
   "prettier.eslintIntegration": true,
-  "prettier.disableLanguages": [],
+  "prettier.disableLanguages": [
+	// "c",
+	// "cpp"
+  ],
   "prettier.formatterPriority": 1,
-  "prettier.useTabs": true,
   "prettier.trailingComma": "all",
   "prettier.singleQuote": false,
+  "prettier.useTabs": true,
+  "prettier.tabWidth": 4,
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+	"c",
+	"css",
+	"cpp",
+	"html",
+	"go",
+	"java",
+	"javascript",
+	"json",
+	"prisma",
+	"python",
+	"svelte",
+    "typescript",
+    "vue"
+  ],
+
 
   "snippets.ultisnips.directories": [
     "$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
