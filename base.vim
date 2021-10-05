@@ -96,6 +96,10 @@ set splitright
 set splitbelow
 " <<<<< split windows <<<<<
 
+" >>>>> tabs >>>>>
+set switchbuf=usetab
+" <<<<< tabs <<<<<
+
 " >>>>> search >>>>>
 set hlsearch
 exec "nohlsearch"

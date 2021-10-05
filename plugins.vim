@@ -95,7 +95,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" >>>>> version control >>>>>
 	" === git ===
     Plug 'airblade/vim-gitgutter'
-	
+	Plug 'theniceboy/vim-gitignore'	
 	" <<<<< version control <<<<<
 	
 	" ===
