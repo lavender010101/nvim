@@ -74,14 +74,12 @@
 	"json.format.enable": true,
 
 	/* === coc-diagnostic === */
-	/* "diagnostic.signOffset": 1, */
 	"diagnostic.errorSign": "\uf467",
 	"diagnostic.warningSign": "\uf071",
 	"diagnostic.infoSign": "\uf129",
 	"diagnostic.hintSign": "\uf864",
 	"diagnostic.displayByAle": false,
 	"diagnostic.refreshOnInsertMode": false,
-	/* "diagnostic.refreshAfterSave": false, */
 	"diagnostic.checkCurrentLine": true,
 	"diagnostic.virtualTextPrefix": " ❯❯❯ ",
 	"diagnostic.virtualText": true,
@@ -114,8 +112,16 @@
 	"codeLens.enable": true,
 
 	/* === coc-explorer === */
-	"explorer.width": 38,
+	"explorer.width": 26,
 	"explorer.quitOnOpen": true,
+	"explorer.file.column.indent.indentLine": true,
+	"explorer.file.showHiddenFiles": true,
+	"explorer.icon.enableNerdfont": true,
+	"explorer.position": "left",
+	"explorer.icon.source": "builtin",
+	// "explorer.file.column.git.showIgnored": true,
+	"explorer.keyMappingMode": "none",
+	"explorer.buffer.showHiddenBuffers": false,
 	"explorer.sources": [
 		{
 			"name": "buffer",
@@ -124,14 +130,12 @@
 		{
 			"name": "file",
 			"expand": true
+		},
+		{
+			"name": "bookmark",
+			"expand": true
 		}
 	],
-	"explorer.file.column.indent.indentLine": true,
-	"explorer.file.showHiddenFiles": true,
-	"explorer.icon.enableNerdfont": true,
-	// "explorer.file.column.git.showIgnored": true,
-	"explorer.keyMappingMode": "none",
-	"explorer.buffer.showHiddenBuffers": false,
 	"explorer.keyMappings.global": {
 		// "h": "GotoParent",
 		"h": ["gotoParent", "collapse"],

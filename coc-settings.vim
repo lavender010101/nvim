@@ -1,7 +1,7 @@
-" ===
-" ==== install extensions
-" ===
-" >>>>> auto download extensions >>>>>
+" ######################################
+" ########## Global Configure ##########
+" ######################################
+" >>>>> global extensions >>>>>
 let g:coc_global_extensions = [
 	\ 'coc-clangd',
 	\ 'coc-css',
@@ -39,22 +39,9 @@ let g:coc_global_extensions = [
 	" \ 'coc-tailwindcss',
 	" \ 'coc-tasks',
 	" \ 'coc-tslint-plugin',
-	
-" <<<<< global extensions
+" <<<<< global extensions <<<<<
 
-
-
-
-
-
-
-
-
-" ===
-" ==== default
-" ===
-" >>>>> completio >>>>>
-" Use <c-space> to trigger completion.
+" >>>>> completion settings >>>>>
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
 else
@@ -64,7 +51,8 @@ endif
 " use <CR> to insert the selected completion
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                             \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-" <<<<< completion
+" <<<<< completion settings <<<<<
+
 
 " >>>>> code navigation >>>>>
 " jump to functions' definition, references and implementation
@@ -80,14 +68,30 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " >>>>> file explorer >>>>>
 nmap tt :CocCommand explorer<CR>
-nmap ef :CocCommand explorer --preset floating<CR>
+nmap ef :CocCommand explorer --preset custom<CR>
+
+let g:coc_explorer_global_presets = {
+	\ 'custom': {
+		\ 'source': [{
+			\ 'name': 'buffer',
+			\ 'expand': v:true
+			\ }
+		\ ],
+		\ 'width': 26,
+		\ 'position':'left',
+		\ 'open-action-strategy':'sourceWindow',
+		\ 'file-child-template':'[modified] [selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+	\ }
+	\}
+
+
 " <<<<< file explorer <<<<<
 
 
 
 
 " ===
-" === coc-diagnostic
+" ==== coc-diagnostic
 " ===
 " jump to the bug area
 nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
