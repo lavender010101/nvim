@@ -41,6 +41,7 @@ let g:gruvbox_termcolors=16
 set termguicolors " enable true colors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+
 " let g:terminal_color_0  = '#000000'
 " let g:terminal_color_1  = '#FF5555'
 " let g:terminal_color_2  = '#50FA7B'

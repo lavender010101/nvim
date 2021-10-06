@@ -88,7 +88,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== css
 	" ===
-	Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'yarn install'}
+	" Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'yarn install'}
     Plug 'hail2u/vim-css3-syntax'
 
 

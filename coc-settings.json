@@ -48,6 +48,36 @@
 		"variable": "\ue71b"
 	},
 
+	/* ===
+	 * ==== languages support
+	 * ===
+	 */
+
+	/* === coc-html === */
+	"html.enable": true,
+	"html.format.enable": true,
+
+	/* === coc-java === */
+	"java.home": "/opt/JDK/jdk-11.0.11+0",
+
+	"java.configuration.runtimes": [
+		{
+			"name": "JavaSE-11",
+			"path": "/opt/JDK/jdk-11.0.11+0",
+			"default": true
+		}
+	],
+
+	// === coc-js ===
+	"javascript.referencesCodeLens.enable": true,
+	"javascript.showUnused": true,
+	"javascript.suggest.names": true,
+	"javascript.suggestionActions.enabled": true,
+
+	/* === coc-json === */
+	"json.enable": true,
+	"json.format.enable": true,
+
 	/* === coc-python === */
 	"python.pythonPath": "/opt/miniconda3/bin/python",
 	"python.venvPath": "/opt/miniconda3/bin/python",
@@ -60,19 +90,20 @@
 		"{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 1}"
 	],
 
-	/* === coc-html === */
-	"html.enable": true,
-	"html.format.enable": true,
-	// === coc-js ===
-	"javascript.referencesCodeLens.enable": true,
-	"javascript.showUnused": true,
-	"javascript.suggest.names": true,
-	"javascript.suggestionActions.enabled": true,
+	/* === coc-tsserver === */
+	"typescript.suggestionActions.enabled": true,
+	"typescript.format.enabled": true,
 
-	/* === coc-json === */
-	"json.enable": true,
-	"json.format.enable": true,
+	/* === coc-yaml === */
+	"yaml.format.enable": true,
 
+	"signature.target": "float",
+	"codeLens.enable": true,
+
+	/* ===
+	 * ==== other tools
+	 * ===
+	 */
 	/* === coc-diagnostic === */
 	"diagnostic.errorSign": "\uf467",
 	"diagnostic.warningSign": "\uf071",
@@ -97,22 +128,8 @@
 		"eelixir": "mix_format"
 	},
 
-	/* === coc-translator === */
-	"translator.engines": [
-		"bing",
-		//"google",
-		"youdao",
-		"haici"
-	],
-	// "translator.toLang": [
-	//     "en",
-	//     "zh_CN"
-	// ],
-
-	"codeLens.enable": true,
-
 	/* === coc-explorer === */
-	"explorer.width": 26,
+	"explorer.width": 28,
 	"explorer.quitOnOpen": true,
 	"explorer.file.column.indent.indentLine": true,
 	"explorer.file.showHiddenFiles": true,
@@ -217,16 +234,21 @@
 		"vue"
 	],
 
+	/* === coc-snippets === */
 	"snippets.ultisnips.directories": ["$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"],
 
-	/* === coc-java === */
-	"java.home": "/opt/JDK/jdk-11.0.11+0",
+	/* === coc-translator === */
+	"translator.engines": [
+		"bing",
+		//"google",
+		"youdao",
+		"haici"
+	],
+	// "translator.toLang": [
+	//     "en",
+	//     "zh_CN"
+	// ],
 
-	"java.configuration.runtimes": [
-		{
-			"name": "JavaSE-11",
-			"path": "/opt/JDK/jdk-11.0.11+0",
-			"default": true
-		}
-	]
+	/* === coc-yank === */
+	"yank.enableCompletion": false
 }

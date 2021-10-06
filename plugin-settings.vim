@@ -37,7 +37,13 @@ let g:gitgutter_sign_removed_first_line = '▔'
 let g:gitgutter_sign_modified_removed = '▒'
 " <<<<< airblade/vim-gitgutter <<<<<
 
-
+" >>>>> vim-devicons >>>>>
+" let g:webdevicons_enable = 1 " loading the plugin
+" let g:webdevicons_enable_startify = 1 " support vim-startify
+function! StartifyEntryFormat()
+  return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
+" <<<<< vim-devicons <<<<<
 
 
 
