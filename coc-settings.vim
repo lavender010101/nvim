@@ -3,7 +3,7 @@
 " ######################################
 " >>>>> global extensions >>>>>
 let g:coc_global_extensions = [
-	\ 'coc-clangd',
+	\ 'coc-actions',
 	\ 'coc-css',
 	\ 'coc-diagnostic',
 	\ 'coc-explorer',
@@ -18,7 +18,6 @@ let g:coc_global_extensions = [
 	\ 'coc-pyright',
 	\ 'coc-sh',
 	\ 'coc-snippets',
-	\ 'coc-sourcekit',
 	\ 'coc-syntax',
 	\ 'coc-tailwindcss',
 	\ 'coc-translator',
@@ -29,12 +28,14 @@ let g:coc_global_extensions = [
 	\ 'coc-yank',
 	\]
 	" \ 'https://github.com/rodrigore/coc-tailwind-intellisense'
+	" \ 'coc-clangd',
 	" \ 'coc-eslint',
-	" \ 'coc-git',
 	" \ 'coc-flutter-tools',
+	" \ 'coc-git',
 	" \ 'coc-prisma',
 	" \ 'coc-pyright',
 	" \ 'coc-sh',
+	" \ 'coc-sourcekit',
 	" \ 'coc-stylelint',
 	" \ 'coc-tailwindcss',
 	" \ 'coc-tasks',
@@ -42,11 +43,12 @@ let g:coc_global_extensions = [
 " <<<<< global extensions <<<<<
 
 " >>>>> completion settings >>>>>
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+inoremap <silent><expr> <c-space> coc#refresh()
+" if has('nvim')
+"   inoremap <silent><expr> <c-space> coc#refresh()
+" else
+"   inoremap <silent><expr> <c-@> coc#refresh()
+" endif
 
 " use <CR> to insert the selected completion
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
@@ -56,7 +58,9 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " >>>>> code navigation >>>>>
 " jump to functions' definition, references and implementation
+" use C-o jump back to the original place
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -101,8 +105,8 @@ nmap <silent> <LEADER>= <Plug>(coc-diagnostic-next)
 " ===
 " ==== coc-snippets
 " ===
-imap <C-u> <Plug>(coc-snippets-expand)
-vmap <C-i> <Plug>(coc-snippets-select)
+imap <c-h> <Plug>(coc-snippets-expand)
+vmap <c-l> <Plug>(coc-snippets-select)
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
@@ -130,3 +134,20 @@ vmap ts <Plug>(coc-translator-pv)
 " ===
 " command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <C-f> :CocCommand prettier.formatFile<CR>
+
+
+
+" Remap for do codeAction of selected region
+function! s:cocActionsOpenFromSelected(type) abort
+  execute 'CocCommand actions.open ' . a:type
+endfunction
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)w
+
+
+
+" ===
+" ==== coc-json
+" ===
+autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+" autocmd BufRead,BufNewFile *.json set filetype=jsonc

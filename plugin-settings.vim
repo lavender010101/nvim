@@ -45,6 +45,14 @@ function! StartifyEntryFormat()
 endfunction
 " <<<<< vim-devicons <<<<<
 
+" >>>>> Yggdroot/indentLine (show indent) >>>>>
+autocmd FileType json,markdown let g:indentLine_conceallevel = 0 " restore double quote
+" <<<<< Yggdroot/indentLine <<<<<
+
+" >>>>> elzr/vim-json >>>>>
+autocmd FileType json,markdown let g:vim_json_syntax_conceal = 0
+" <<<<< elzr/vim-json <<<<<
+
 
 
 
@@ -64,9 +72,12 @@ let g:rainbow_active = 1
 " >>>>> liuchengxu/vista.vim (list variables and functions) >>>>>
 noremap tg :Vista!!<CR>
 
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+" let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_icon_indent = ["└─▸ ", "├─▸ "]
 let g:vista_default_executive = 'ctags'
+let g:vista_sidebar_width = 36
 let g:vista_fzf_preview = ['right:50%']
+let g:vista_update_on_text_changed = 1
 let g:vista#renderer#enable_icon = 1
 let g:vista#renderer#icons = {
 \   "function": "\uf794",

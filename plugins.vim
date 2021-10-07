@@ -115,7 +115,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== json
 	" ===
-    Plug 'neoclide/jsonc.vim'
+	Plug 'elzr/vim-json'
+    " Plug 'neoclide/jsonc.vim'
 
 
 	" ===

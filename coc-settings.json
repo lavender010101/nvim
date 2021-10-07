@@ -1,5 +1,4 @@
 {
-	/* === default === */
 	"coc.preferences.extensionUpdateCheck": "daily",
 	"coc.preferences.semanticTokensHighlights": false,
 	"coc.preferences.enableFloatHighlight": true,
@@ -48,18 +47,10 @@
 		"variable": "\ue71b"
 	},
 
-	/* ===
-	 * ==== languages support
-	 * ===
-	 */
-
-	/* === coc-html === */
 	"html.enable": true,
 	"html.format.enable": true,
 
-	/* === coc-java === */
 	"java.home": "/opt/JDK/jdk-11.0.11+0",
-
 	"java.configuration.runtimes": [
 		{
 			"name": "JavaSE-11",
@@ -68,17 +59,14 @@
 		}
 	],
 
-	// === coc-js ===
 	"javascript.referencesCodeLens.enable": true,
 	"javascript.showUnused": true,
 	"javascript.suggest.names": true,
 	"javascript.suggestionActions.enabled": true,
 
-	/* === coc-json === */
 	"json.enable": true,
 	"json.format.enable": true,
 
-	/* === coc-python === */
 	"python.pythonPath": "/opt/miniconda3/bin/python",
 	"python.venvPath": "/opt/miniconda3/bin/python",
 	"python.condaPath": "/opt/miniconda3/bin/conda",
@@ -90,21 +78,14 @@
 		"{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 1}"
 	],
 
-	/* === coc-tsserver === */
 	"typescript.suggestionActions.enabled": true,
 	"typescript.format.enabled": true,
 
-	/* === coc-yaml === */
 	"yaml.format.enable": true,
 
 	"signature.target": "float",
 	"codeLens.enable": true,
 
-	/* ===
-	 * ==== other tools
-	 * ===
-	 */
-	/* === coc-diagnostic === */
 	"diagnostic.errorSign": "\uf467",
 	"diagnostic.warningSign": "\uf071",
 	"diagnostic.infoSign": "\uf129",
@@ -128,7 +109,6 @@
 		"eelixir": "mix_format"
 	},
 
-	/* === coc-explorer === */
 	"explorer.width": 28,
 	"explorer.quitOnOpen": true,
 	"explorer.file.column.indent.indentLine": true,
@@ -136,7 +116,6 @@
 	"explorer.icon.enableNerdfont": true,
 	"explorer.position": "left",
 	"explorer.icon.source": "builtin",
-	// "explorer.file.column.git.showIgnored": true,
 	"explorer.keyMappingMode": "none",
 	"explorer.buffer.showHiddenBuffers": false,
 	"explorer.sources": [
@@ -154,7 +133,6 @@
 		}
 	],
 	"explorer.keyMappings.global": {
-		// "h": "GotoParent",
 		"h": ["gotoParent", "collapse"],
 		"j": "nodeNext",
 		"k": "nodePrev",
@@ -200,18 +178,13 @@
 		">>": "gitUnstage"
 	},
 
-	/* === coc-lists === */
 	"list.previewHighlightGroup": "Statement",
 	"list.nextKeymap": "<C-j>",
 	"list.previousKeymap": "<C-k>",
 
-	/* === coc-prettier === */
 	"prettier.printWidth": 100,
 	"prettier.eslintIntegration": true,
-	"prettier.disableLanguages": [
-		// "c",
-		// "cpp"
-	],
+	"prettier.disableLanguages": [],
 	"prettier.formatterPriority": 1,
 	"prettier.trailingComma": "all",
 	"prettier.singleQuote": false,
@@ -227,28 +200,31 @@
 		"java",
 		"javascript",
 		"json",
-		"prisma",
 		"python",
 		"svelte",
 		"typescript",
 		"vue"
 	],
 
-	/* === coc-snippets === */
-	"snippets.ultisnips.directories": ["$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"],
-
-	/* === coc-translator === */
-	"translator.engines": [
-		"bing",
-		//"google",
-		"youdao",
-		"haici"
+	"snippets.ultisnips.directories": [
+		"$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/",
+		"$HOME/.config/nvim/snippets"
 	],
-	// "translator.toLang": [
-	//     "en",
-	//     "zh_CN"
-	// ],
 
-	/* === coc-yank === */
-	"yank.enableCompletion": false
+	"translator.engines": ["bing", "youdao", "haici"],
+
+	"yank.enableCompletion": false,
+
+	"languageserver": {
+		"ccls": {
+			"command": "ccls",
+			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+			"rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+			"initializationOptions": {
+				"cache": {
+					"directory": "/tmp/ccls"
+				}
+			}
+		}
+	}
 }

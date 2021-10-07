@@ -22,6 +22,9 @@ noremap <LEADER><CR> :nohlsearch<CR>
 " <<<<< search <<<<<
 
 
+" >>>>> base command >>>>>
+noremap Q :qa<CR>
+" <<<<< base command <<<<<
 
 
 
@@ -126,6 +129,7 @@ set listchars=tab:\|\ ,trail:▫
 set foldenable
 set foldlevel=99
 set foldmethod=indent
+noremap <<silent> <LEADER>o za
 
 " wrap
 set wrap
