@@ -95,7 +95,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== go
 	" ===
-	Plug 'fatih/vim-go'
+	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 	
 	" ===
