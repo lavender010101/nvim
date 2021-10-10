@@ -92,7 +92,7 @@ set laststatus=2 " show status line
 
 " >>>>> command window >>>>>
 set showcmd
-set cmdheight=2
+" set cmdheight=2
 " <<<<< command window <<<<<
 
 " >>>>> split windows >>>>>
@@ -244,3 +244,6 @@ let g:browser='google-chrome-stable'
 set fileencodings=utf-8,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
+
+" === input ===
+set ttimeoutlen=50

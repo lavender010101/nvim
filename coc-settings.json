@@ -105,8 +105,12 @@
 		"php": ["phpstan", "psalm"]
 	},
 	"diagnostic-languageserver.formatFiletypes": {
-		"elixir": "mix_format",
-		"eelixir": "mix_format"
+		"vim": "vint",
+		"email": "languagetool",
+		"markdown": ["write-good", "markdownlint"],
+		"sh": "shellcheck",
+		"elixir": ["mix_credo", "mix_credo_compile"],
+		"eelixir": ["mix_credo", "mix_credo_compile"]
 	},
 
 	"explorer.width": 28,
@@ -225,6 +229,11 @@
 					"directory": "/tmp/ccls"
 				}
 			}
+		},
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod"],
+			"filetypes": ["go"]
 		}
 	}
 }
