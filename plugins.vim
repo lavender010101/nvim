@@ -80,38 +80,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 
 
-<<<<<<< HEAD
-	" >>>>> tags >>>>>
-	Plug 'liuchengxu/vista.vim'
-	" <<<<< tags <<<<<
 	
-	" >>>>> statistic >>>>>
-	Plug 'wakatime/vim-wakatime'
-	" <<<<< statistic <<<<<
-	
-	" >>>>> schedule >>>>>
-	Plug 'itchyny/calendar.vim'
-	" <<<<< schedule <<<<<
-	
-	" >>>>> file searching >>>>>
-	Plug 'junegunn/fzf.vim'
-	" <<<<< file searching <<<<<
-	
-	" >>>>> file history >>>>>
-    Plug 'mhinz/vim-startify'
-	" <<<<< file history <<<<<
-	
-	" >>>>> version control >>>>>
-	" === git ===
-	" Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug']  }
-	" Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins'  }
-    Plug 'airblade/vim-gitgutter'
-    " Plug 'cohama/agit.vim'
-	" Plug 'kdheepak/lazygit.nvim'
-	
-	" <<<<< version control <<<<<
-=======
->>>>>>> origin/master
 	
 
 	" #######################################
@@ -121,21 +90,13 @@ call plug#begin('~/.config/nvim/plugged')
 	" ==== css
 	" ===
 	" Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'yarn install'}
-<<<<<<< HEAD
-    " Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-=======
     Plug 'hail2u/vim-css3-syntax'
->>>>>>> origin/master
 
 
 	" ===
 	" ==== go
 	" ===
-<<<<<<< HEAD
-	Plug 'fatih/vim-go'
-=======
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
->>>>>>> origin/master
 
 	
 	" ===
@@ -162,14 +123,9 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== markdown
 	" ===
-<<<<<<< HEAD
-	" Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-	" Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
-=======
 	Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 	Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
 	Plug 'joker1007/vim-markdown-quote-syntax'
->>>>>>> origin/master
 
 
 	" ===

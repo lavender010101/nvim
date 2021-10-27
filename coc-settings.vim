@@ -13,7 +13,6 @@ let g:coc_global_extensions = [
 	\ 'coc-json',
 	\ 'coc-lists',
 	\ 'coc-prettier',
-	\ 'coc-python',
 	\ 'coc-pyright',
 	\ 'coc-sh',
 	\ 'coc-snippets',
@@ -28,18 +27,12 @@ let g:coc_global_extensions = [
 	\]
 	
 	" \ 'https://github.com/rodrigore/coc-tailwind-intellisense'
-<<<<<<< HEAD
-	" \ 'coc-git',
-	" \ 'coc-go',
-=======
 	" \ 'coc-clangd',
->>>>>>> origin/master
 	" \ 'coc-eslint',
 	" \ 'coc-flutter-tools',
 	" \ 'coc-git',
 	" \ 'coc-go',
 	" \ 'coc-prisma',
-	" \ 'coc-pyright',
 	" \ 'coc-sh',
 	" \ 'coc-sourcekit',
 	" \ 'coc-stylelint',
