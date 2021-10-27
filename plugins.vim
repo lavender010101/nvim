@@ -96,8 +96,8 @@ call plug#begin('~/.config/nvim/plugged')
 	
 	" >>>>> version control >>>>>
 	" === git ===
-	Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug']  }
-	Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins'  }
+	" Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug']  }
+	" Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins'  }
     Plug 'airblade/vim-gitgutter'
     " Plug 'cohama/agit.vim'
 	" Plug 'kdheepak/lazygit.nvim'
@@ -107,14 +107,14 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== css
 	" ===
-	Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'yarn install'}
-    Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+	" Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'yarn install'}
+    " Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
 
 
 	" ===
 	" ==== go
 	" ===
-	" Plug 'fatih/vim-go'
+	Plug 'fatih/vim-go'
 
 	
 	" ===
@@ -128,8 +128,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== javascript
 	" ===
-    Plug 'pangloss/vim-javascript'
-    Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+    " Plug 'pangloss/vim-javascript'
+    " Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
 
 
 
@@ -143,8 +143,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== markdown
 	" ===
-	Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-	Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
+	" Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+	" Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
 
 
 	" ===

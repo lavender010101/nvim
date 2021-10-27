@@ -8,7 +8,6 @@ let g:coc_global_extensions = [
 	\ 'coc-diagnostic',
 	\ 'coc-explorer',
 	\ 'coc-gitignore',
-	\ 'coc-go',
 	\ 'coc-html',
 	\ 'coc-java',
 	\ 'coc-json',
@@ -28,8 +27,10 @@ let g:coc_global_extensions = [
 	\ 'coc-yaml',
 	\ 'coc-yank',
 	\]
+	
 	" \ 'https://github.com/rodrigore/coc-tailwind-intellisense'
 	" \ 'coc-git',
+	" \ 'coc-go',
 	" \ 'coc-eslint',
 	" \ 'coc-flutter-tools',
 	" \ 'coc-prisma',
