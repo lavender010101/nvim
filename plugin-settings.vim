@@ -1,10 +1,7 @@
-" ===
-" ==== editor enhance
-" ===
-" === rainbow ===
-let g:rainbow_active = 1
-
-" === xtabline ===
+" ################################
+" ########## Appearence ##########
+" ################################
+" >>>>> mg979/vim-xtabline (tabs)>>>>>
 let g:xtabline_settings = {}
 let g:xtabline_settings.enable_mappings = 0
 let g:xtabline_settings.tabline_modes = ['tabs', 'buffers']
@@ -19,127 +16,112 @@ func! SetBufferName()
 	" call xtabline#cmds#run("name_tab", expand('%:p:h:t'))
 	call xtabline#cmds#run("name_tab", s:file_name)
 endfunc
+" <<<<< mg979/vim-xtabline <<<<<
 
-
-" === spaceline.vim ===
+" >>>>> lavender010101/spaceline.vim (bottom line)>>>>>
 let g:spaceline_seperate_style = 'arrow-fade'
-
-" let g:spaceline_colorscheme = 'deus'
 let g:spaceline_colorscheme = 'default'
+let g:spaceline_lsp_executive = 'coc' " show lsp status
+let g:spaceline_diff_tool = 'git-gutter' " show git status
+" <<<<< lavender010101/spaceline.vim <<<<<
 
-let g:spaceline_lsp_executive = 'coc'
-" side bar
-let g:spaceline_diff_tool = 'git-gutter'
+" >>>>> airblade/vim-gitgutter (git status) >>>>>
+let g:gitgutter_sign_allow_clobber = 0
+let g:gitgutter_map_keys = 0
+let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_preview_win_floating = 1
+let g:gitgutter_sign_added = '▎'
+let g:gitgutter_sign_modified = '░'
+let g:gitgutter_sign_removed = '▏'
+let g:gitgutter_sign_removed_first_line = '▔'
+let g:gitgutter_sign_modified_removed = '▒'
+" <<<<< airblade/vim-gitgutter <<<<<
 
-" syntax check
-" let g:spaceline_diagnostic_errorsign = '❌ '
-" let g:spaceline_diagnostic_warnsign = '⚠ '
-" let g:spaceline_diagnostic_oksign
+" >>>>> vim-devicons >>>>>
+" let g:webdevicons_enable = 1 " loading the plugin
+" let g:webdevicons_enable_startify = 1 " support vim-startify
+function! StartifyEntryFormat()
+  return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
+" <<<<< vim-devicons <<<<<
 
-" vim status
+" >>>>> Yggdroot/indentLine (show indent) >>>>>
+autocmd FileType json,markdown let g:indentLine_conceallevel = 0 " restore double quote
+" <<<<< Yggdroot/indentLine <<<<<
 
-" let g:spaceline_custom_vim_status = {
-" 			\ "n": "NORMAL ",
-" 			\ "V":"VISUAL ",
-" 			\ "v":"VISUAL ",
-" 			\ "\<C-v>": "VISUAL ",
-" 			\ "i":"INSERT ",
-" 			\ "R":"🅡 ",
-" 			\ "s":"SELECT ",
-" 			\ "t":"🅣 ",
-" 			\ "c":"COMMAND ",
-" 			\ "!":"SE"
-" 			\ }
+" >>>>> elzr/vim-json >>>>>
+autocmd FileType json,markdown let g:vim_json_syntax_conceal = 0
+" <<<<< elzr/vim-json <<<<<
 
 
-" ===== vista.vim =====
+
+
+
+
+
+" ####################################
+" ########## Coding Enhance ##########
+" ####################################
+" ===
+" ==== Common Text
+" ===
+" >>>>> luochen1990/rainbow (rainbow brackets) >>>>>
+let g:rainbow_active = 1
+" <<<<< luochen1990/rainbow <<<<<
+
+" >>>>> liuchengxu/vista.vim (list variables and functions) >>>>>
 noremap tg :Vista!!<CR>
 
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+" let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_icon_indent = ["└─▸ ", "├─▸ "]
 let g:vista_default_executive = 'ctags'
+let g:vista_sidebar_width = 36
 let g:vista_fzf_preview = ['right:50%']
+let g:vista_update_on_text_changed = 1
 let g:vista#renderer#enable_icon = 1
 let g:vista#renderer#icons = {
 \   "function": "\uf794",
 \   "variable": "\uf71b",
 \  }
+" <<<<< liuchengxu/vista.vim <<<<<
 
+" >>>>> RRethy/vim-hexokinase (preview colors in editor) >>>>>
+let g:Hexokinase_highlighters = ['backgroundfull'] " options: 'virtual' 'sign_column' 'foreground[full]' 'background[full]'
+" <<<<< RRethy/vim-hexokinase <<<<<
 
-" === vim-hexokinase ===
-" options: 'virtual' 'sign_column' 'foreground[full]' 'background[full]'
-let g:Hexokinase_highlighters = ['backgroundfull']
-
-
-" === vim-illuminate ===
+" >>>>> RRethy/vim-illuminate (highlight the words under cursor) >>>>>
 let g:Illuminate_delay = 750
 hi illuminateWord cterm=undercurl gui=undercurl
+" <<<<< RRethy/vim-illuminate <<<<<
 
-
-" === vim-move ===
-" let g:move_map_keys = 0
-" " let g:move_key_modifier = 'alt'
-" " lines
-" nmap <A-j> <Plug>MoveLineDown
-" nmap <A-k> <Plug>MoveLineUp
-" " char
-" nmap <A-h> <Plug>MoveCharLeft
-" nmap <A-l> <Plug>MoveCharRight
-" " code block
-" vmap <A-j> <Plug>MoveBlockDown
-" vmap <A-k> <Plug>MoveBlockUp
-" vmap <A-h> <Plug>MoveBlockLeft
-" vmap <A-l> <Plug>MoveBlockRight
-
-
-" === tcomment_vim ===
-nnoremap ci cl
-let g:tcomment_textobject_inlinecomment = ''
-nmap <LEADER>cn g>c
-vmap <LEADER>cn g>
-nmap <LEADER>cu g<c
-vmap <LEADER>cu g<
-
-
-
-" ===
-" ==== files coding enhance
-" ===
-
-" >>>>> common text files >>>>>
-" === bullet.vim ===
+" >>>>> dkarter/bullets.vim (auto add lists symbols) >>>>>
 let g:bullets_enabled_file_types = [
 	\ 'markdown',
 	\ 'text',
 	\ 'gitcommit',
 	\ 'scratch'
 	\]
+" <<<<< dkarter/bullets.vim <<<<<
 
-" === vim-table-mode ===
+" >>>>> tomtom/tcomment_vim (comment lines or block) >>>>>
+nnoremap ci cl
+let g:tcomment_textobject_inlinecomment = ''
+nmap <LEADER>cn g>c
+vmap <LEADER>cn g>
+nmap <LEADER>cu g<c
+vmap <LEADER>cu g<
+" <<<<< tomtom/tcomment_vim <<<<<
+
+" >>>>> dhruvasagar/vim-table-mode (align items in form) >>>>>
 noremap <LEADER>tm :TableModeToggle<CR>
 let g:table_mode_cell_text_object_i_map = 'k<Bar>'
-" <<<<< common text files <<<<<
+" <<<<< dhruvasagar/vim-table-mode <<<<<
 
 
-" >>>>> markdown files >>>>>
-" === vim-instant-markdown ===
-let g:instant_markdown_slow = 0
-let g:instant_markdown_autostart = 0
-let g:instant_markdown_autoscroll = 1
-
-let g:mkdp_browser='google-chrome-stable'
-
-" === vim-markdown-toc ===
-let g:vmt_auto_update_on_save = 0
-let g:vmt_cycle_list_item_markers = 1
-let g:vmt_fence_text = 'TOC'
-let g:vmt_fence_closing_text = '/TOC'
-
-" <<<<< markdown files <<<<<
-
-" >>>>> golang >>>>>" ===
 " ===
-" ==== vim-go
+" ==== Golang
 " ===
+" >>>>> fatih/vim-go (Golang ide) >>>>>
 let g:go_echo_go_info = 0
 let g:go_doc_popup_window = 1
 let g:go_def_mapping_enabled = 0
@@ -167,44 +149,24 @@ let g:go_highlight_types = 1
 let g:go_highlight_variable_assignments = 0
 let g:go_highlight_variable_declarations = 0
 let g:go_doc_keywordprg_enabled = 0
-
-" <<<<< golang <<<<<
-
-
-
-
-
-
-
-
+" <<<<< fatih/vim-go <<<<<
 
 " ===
-" === tools
+" ==== Markdown
 " ===
-" >>>>> git tools >>>>>
-" === vim-gitgutter ===
-let g:gitgutter_sign_allow_clobber = 0
-let g:gitgutter_map_keys = 0
-let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_preview_win_floating = 1
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified = '░'
-let g:gitgutter_sign_removed = '▏'
-let g:gitgutter_sign_removed_first_line = '▔'
-let g:gitgutter_sign_modified_removed = '▒'
-" <<<<< git tools <<<<<
-" >>>>> file navigation >>>>>
-" === Leaderf ===
-let g:Lf_PreviewInPopup = 1
-let g:Lf_PreviewCode = 1
-let g:Lf_ShowHidden = 1
-let g:Lf_ShowDevIcons = 1
-let g:Lf_UseVersionControlTool = 0
-let g:Lf_IgnoreCurrentBufferName = 1
-let g:Lf_WildIgnore = {
-        \ 'dir': ['.git', 'vendor', 'node_modules'],
-        \ 'file': ['__vim_project_root']
-        \}
-let g:Lf_UseMemoryCache = 0
-let g:Lf_UseCache = 0
-" <<<<< file navigation <<<<<
+" >>>>> instant-markdown/vim-instant-markdown (markdown preview) >>>>>
+let g:instant_markdown_slow = 0
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_autoscroll = 1
+
+let g:mkdp_browser='google-chrome-stable'
+" <<<<< instant-markdown/vim-instant-markdown <<<<<
+
+" >>>>> mzlogin/vim-markdown-toc (markdown toc) >>>>>
+" === vim-markdown-toc ===
+let g:vmt_auto_update_on_save = 0
+let g:vmt_cycle_list_item_markers = 1
+let g:vmt_fence_text = 'TOC'
+let g:vmt_fence_closing_text = '/TOC'
+" <<<<< mzlogin/vim-markdown-toc <<<<<
+

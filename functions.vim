@@ -22,7 +22,8 @@ func! RunOrPreview()
 	elseif &filetype == 'go'
 		set splitbelow
 		:sp
-		:term go run .
+		" :term go run .
+		:term go run %
 
 	elseif &filetype == 'html'
 		silent! exec "!".g:browser." % &"

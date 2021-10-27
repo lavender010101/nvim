@@ -1,0 +1,25 @@
+snippet psv "static void method"
+public static void ${1}(${2}){
+	${0}
+}
+endsnippet
+
+
+snippet tcf "try_catch_finally" b
+try {
+	$1${VISUAL}
+} catch (${2:Exception} ${3:e}) {
+	${4:e.printStackTrace();}
+} finally {
+	$5
+}
+endsnippet
+
+
+snippet ifel "if_else" b
+if ($1) {
+	$2
+} else {
+	$3
+}
+endsnippet

@@ -1,79 +1,86 @@
-if empty(glob('~/.config/nvim/plugged'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+" if empty(glob('~/.config/nvim/plugged'))
+" 	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+" 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" endif
 
 
 
 call plug#begin('~/.config/nvim/plugged')
-
-	" ===
-	" ==== visual enhancement
-	" ===
-	" >>>>> theme >>>>>
-	" === color ===
+	" ################################
+	" ########## Appearence ##########
+	" ################################
+	" >>>>> theme and colorscheme >>>>>
+	Plug 'morhetz/gruvbox' " theme and colorscheme
 	" Plug 'theniceboy/nvim-deus'
 	" Plug 'ajmwagar/vim-deus'
-	Plug 'morhetz/gruvbox'
+	" <<<<< theme and colorscheme <<<<<
 	
-	" === status line ===
-	" Plug 'lavender010101/eleline.vim'
-	" Plug 'theniceboy/eleline.vim'
-	" Plug 'ojroques/vim-scrollstatus'
+	" >>>>> bottom line >>>>>
 	Plug 'lavender010101/spaceline.vim'
-	" Plug 'glepnir/spaceline.vim'
+	" <<<<< bottom line <<<<<
 
-	" === tag line ===
+	" >>>>> tabs  >>>>>
     Plug 'mg979/vim-xtabline'
+	" <<<<< tabs <<<<<
 
-	" === code formater ===
-	Plug 'google/vim-maktaba'
-	Plug 'google/vim-codefmt'
-
-	" === file icons ===
+	" >>>>> icons >>>>>
     Plug 'ryanoasis/vim-devicons'
-	" <<<<< theme <<<<<
-
-	" >>>>> highlighting >>>>>
-	Plug 'RRethy/vim-hexokinase', {'do': 'make hexokinase'} " display the colors in the file
-	Plug 'RRethy/vim-illuminate' " highlighting the word under the cursor
-	" indent line
-	Plug 'Yggdroot/indentLine' " show indent lines
-	" rainbow brackets
-    Plug 'luochen1990/rainbow'
-	" <<<<< highlighting <<<<<
+	" <<<<< icons <<<<<
+	
 
 
 
 
+
+
+	" ###########################
+	" ########## tools ##########
+	" ###########################
+	
 	" ===
-	" ==== efficiency
+	" ==== Common
 	" ===
-	" >>>>> code efficiency >>>>>
-	" === auto complete ===
+	" >>>>> completion >>>>>
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'honza/vim-snippets'
+	" <<<<< completion <<<<<
 
-	" === comment ===
+	" >>>>> code formatter >>>>>
+	" Plug 'google/vim-maktaba' " depended by vim-codefmt
+	" Plug 'google/vim-codefmt'
+	" <<<<< code formatter <<<<<
+
+	" >>>>> highlighting and prompt >>>>>
+	Plug 'RRethy/vim-hexokinase', {'do': 'make hexokinase'} " display the colors in the file
+	Plug 'RRethy/vim-illuminate' " highlighting the word under the cursor
+	Plug 'Yggdroot/indentLine' " show indent lines
+	Plug 'luochen1990/rainbow' " rainbow brackets
+	Plug 'jiangmiao/auto-pairs' " highlight the pair brackets
+	Plug 'theniceboy/vim-gitignore'	" highlight the gitignore file
+	" <<<<< highlighting and prompt <<<<<
+
+	" >>>>> other enhance >>>>>
     Plug 'tomtom/tcomment_vim' " in <space>cn to comment a line
-	
-	" === brackets ===
-	Plug 'jiangmiao/auto-pairs'
+
     Plug 'tpope/vim-surround' " type yskw' to wrap the word with '' or type cs'` to change 'word' to `word`
-	
-	" === selection ===
+
 	Plug 'gcmt/wildfire.vim' " in Visual mode, type k' to select all text in '', or type k) k] k} kp
-	" === move code block ===
+
 	Plug 'matze/vim-move' " move the selected code blocks/lines
 
+	Plug 'liuchengxu/vista.vim' " show variables and functions
 
-	" === change conda envs ===
-	" Plug 'cjrh/vim-conda'
-	" Plug 'davidhalter/jedi-vim'
+	Plug 'wakatime/vim-wakatime' " coding statistic
 
-	" <<<<< code efficiency <<<<<
+    Plug 'mhinz/vim-startify' " fast open history files
 
+    Plug 'airblade/vim-gitgutter' " show git status
+	" <<<<< other enhance <<<<<
+
+
+
+<<<<<<< HEAD
 	" >>>>> tags >>>>>
 	Plug 'liuchengxu/vista.vim'
 	" <<<<< tags <<<<<
@@ -103,26 +110,38 @@ call plug#begin('~/.config/nvim/plugged')
 	" Plug 'kdheepak/lazygit.nvim'
 	
 	" <<<<< version control <<<<<
+=======
+>>>>>>> origin/master
 	
+
+	" #######################################
+	" ########## Languages Support ##########
+	" #######################################
 	" ===
 	" ==== css
 	" ===
 	" Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'yarn install'}
+<<<<<<< HEAD
     " Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+=======
+    Plug 'hail2u/vim-css3-syntax'
+>>>>>>> origin/master
 
 
 	" ===
 	" ==== go
 	" ===
+<<<<<<< HEAD
 	Plug 'fatih/vim-go'
+=======
+	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+>>>>>>> origin/master
 
 	
 	" ===
 	" ==== html
 	" ===
-    " Plug 'othree/html5.vim'
     Plug 'alvan/vim-closetag'
-
 
 
 	" ===
@@ -136,21 +155,27 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== json
 	" ===
-    Plug 'elzr/vim-json'
-    Plug 'neoclide/jsonc.vim'
+	Plug 'elzr/vim-json'
+    " Plug 'neoclide/jsonc.vim'
 
 
 	" ===
 	" ==== markdown
 	" ===
+<<<<<<< HEAD
 	" Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 	" Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
+=======
+	Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+	Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
+	Plug 'joker1007/vim-markdown-quote-syntax'
+>>>>>>> origin/master
 
 
 	" ===
-	" ==== text files
+	" ==== common text files
 	" ===
-	Plug 'dkarter/bullets.vim'
+	Plug 'dkarter/bullets.vim' " auto add lists symbols
 	Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug']}
 
 call plug#end()

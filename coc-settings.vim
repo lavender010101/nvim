@@ -1,9 +1,9 @@
-" ===
-" ==== install extensions
-" ===
-" >>>>> auto download extensions >>>>>
+" ######################################
+" ########## Global Configure ##########
+" ######################################
+" >>>>> global extensions >>>>>
 let g:coc_global_extensions = [
-	\ 'coc-clangd',
+	\ 'coc-actions',
 	\ 'coc-css',
 	\ 'coc-diagnostic',
 	\ 'coc-explorer',
@@ -17,7 +17,6 @@ let g:coc_global_extensions = [
 	\ 'coc-pyright',
 	\ 'coc-sh',
 	\ 'coc-snippets',
-	\ 'coc-sourcekit',
 	\ 'coc-syntax',
 	\ 'coc-tailwindcss',
 	\ 'coc-translator',
@@ -29,47 +28,45 @@ let g:coc_global_extensions = [
 	\]
 	
 	" \ 'https://github.com/rodrigore/coc-tailwind-intellisense'
+<<<<<<< HEAD
 	" \ 'coc-git',
 	" \ 'coc-go',
+=======
+	" \ 'coc-clangd',
+>>>>>>> origin/master
 	" \ 'coc-eslint',
 	" \ 'coc-flutter-tools',
+	" \ 'coc-git',
+	" \ 'coc-go',
 	" \ 'coc-prisma',
 	" \ 'coc-pyright',
 	" \ 'coc-sh',
+	" \ 'coc-sourcekit',
 	" \ 'coc-stylelint',
 	" \ 'coc-tailwindcss',
 	" \ 'coc-tasks',
 	" \ 'coc-tslint-plugin',
-	
-" <<<<< global extensions
+" <<<<< global extensions <<<<<
 
-
-
-
-
-
-
-
-
-" ===
-" ==== default
-" ===
-" >>>>> completio >>>>>
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+" >>>>> completion settings >>>>>
+inoremap <silent><expr> <c-space> coc#refresh()
+" if has('nvim')
+"   inoremap <silent><expr> <c-space> coc#refresh()
+" else
+"   inoremap <silent><expr> <c-@> coc#refresh()
+" endif
 
 " use <CR> to insert the selected completion
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                             \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-" <<<<< completion
+" <<<<< completion settings <<<<<
+
 
 " >>>>> code navigation >>>>>
 " jump to functions' definition, references and implementation
+" use C-o jump back to the original place
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -81,14 +78,30 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " >>>>> file explorer >>>>>
 nmap tt :CocCommand explorer<CR>
-nmap ef :CocCommand explorer --preset floating<CR>
+nmap ef :CocCommand explorer --preset custom<CR>
+
+let g:coc_explorer_global_presets = {
+	\ 'custom': {
+		\ 'source': [{
+			\ 'name': 'buffer',
+			\ 'expand': v:true
+			\ }
+		\ ],
+		\ 'width': 26,
+		\ 'position':'left',
+		\ 'open-action-strategy':'sourceWindow',
+		\ 'file-child-template':'[modified] [selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+	\ }
+	\}
+
+
 " <<<<< file explorer <<<<<
 
 
 
 
 " ===
-" === coc-diagnostic
+" ==== coc-diagnostic
 " ===
 " jump to the bug area
 nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
@@ -98,11 +111,11 @@ nmap <silent> <LEADER>= <Plug>(coc-diagnostic-next)
 " ===
 " ==== coc-snippets
 " ===
-imap <C-u> <Plug>(coc-snippets-expand)
-vmap <C-k> <Plug>(coc-snippets-select)
-let g:coc_snippet_next = '<c-k>'
-let g:coc_snippet_prev = '<c-j>'
-imap <C-k> <Plug>(coc-snippets-expand-jump)
+imap <c-h> <Plug>(coc-snippets-expand)
+vmap <c-l> <Plug>(coc-snippets-select)
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 let g:snips_author = 'lavender010101'
 
 
@@ -120,3 +133,27 @@ vmap ts <Plug>(coc-translator-pv)
 " " replace
 " nmap tsr <Plug>(coc-translator-r)
 " vmap tsr <Plug>(coc-translator-rv)
+
+
+" ===
+" ==== coc-prettier
+" ===
+" command! -nargs=0 Prettier :CocCommand prettier.formatFile
+nmap <C-f> :CocCommand prettier.formatFile<CR>
+
+
+
+" Remap for do codeAction of selected region
+function! s:cocActionsOpenFromSelected(type) abort
+  execute 'CocCommand actions.open ' . a:type
+endfunction
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)w
+
+
+
+" ===
+" ==== coc-json
+" ===
+autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+" autocmd BufRead,BufNewFile *.json set filetype=jsonc

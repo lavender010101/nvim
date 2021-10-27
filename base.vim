@@ -22,6 +22,9 @@ noremap <LEADER><CR> :nohlsearch<CR>
 " <<<<< search <<<<<
 
 
+" >>>>> base command >>>>>
+noremap Q :qa<CR>
+" <<<<< base command <<<<<
 
 
 
@@ -40,6 +43,7 @@ color gruvbox
 let g:gruvbox_termcolors=16
 set termguicolors " enable true colors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
 
 " let g:terminal_color_0  = '#000000'
 " let g:terminal_color_1  = '#FF5555'
@@ -88,13 +92,17 @@ set laststatus=2 " show status line
 
 " >>>>> command window >>>>>
 set showcmd
-set cmdheight=2
+" set cmdheight=2
 " <<<<< command window <<<<<
 
 " >>>>> split windows >>>>>
 set splitright
 set splitbelow
 " <<<<< split windows <<<<<
+
+" >>>>> tabs >>>>>
+set switchbuf=usetab
+" <<<<< tabs <<<<<
 
 " >>>>> search >>>>>
 set hlsearch
@@ -121,6 +129,7 @@ set listchars=tab:\|\ ,trail:▫
 set foldenable
 set foldlevel=99
 set foldmethod=indent
+noremap <<silent> <LEADER>o za
 
 " wrap
 set wrap
@@ -235,3 +244,6 @@ let g:browser='google-chrome-stable'
 set fileencodings=utf-8,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
+
+" === input ===
+set ttimeoutlen=50
