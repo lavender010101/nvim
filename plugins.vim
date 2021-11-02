@@ -81,6 +81,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 
 	
+	
 
 	" #######################################
 	" ########## Languages Support ##########
@@ -107,8 +108,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== javascript
 	" ===
-    Plug 'pangloss/vim-javascript'
-    Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+    " Plug 'pangloss/vim-javascript'
+    " Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
 
 
 
