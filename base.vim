@@ -13,6 +13,9 @@ noremap K 5k
 noremap L 5l
 noremap W 5w
 noremap B 5b
+
+noremap ; 0
+noremap ' $
 " <<<<< cursor motion <<<<<
 
 
