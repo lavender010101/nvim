@@ -67,11 +67,6 @@
 	"json.enable": true,
 	"json.format.enable": true,
 
-	"python.pythonPath": "/opt/miniconda3/bin/python",
-	"python.venvPath": "/opt/miniconda3/bin/python",
-	"python.condaPath": "/opt/miniconda3/bin/conda",
-	"python.autoComplete.addBrackets": true,
-	"python.jediEnabled": false,
 	"python.formatting.provider": "yapf",
 	"python.formatting.yapfArgs": [
 		"--style",
