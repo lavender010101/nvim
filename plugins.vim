@@ -11,9 +11,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" ########## Appearence ##########
 	" ################################
 	" >>>>> theme and colorscheme >>>>>
-	Plug 'morhetz/gruvbox' " theme and colorscheme
-	" Plug 'theniceboy/nvim-deus'
-	" Plug 'ajmwagar/vim-deus'
+	" Plug 'morhetz/gruvbox' " theme and colorscheme
+	Plug 'theniceboy/nvim-deus'
 	" <<<<< theme and colorscheme <<<<<
 	
 	" >>>>> bottom line >>>>>
