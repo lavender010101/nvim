@@ -17,10 +17,10 @@ call plug#begin('~/.config/nvim/plugged')
 	" <<<<< theme and colorscheme <<<<<
 	
 	" >>>>> status line >>>>>
-	Plug 'lavender010101/spaceline.vim'
+	" Plug 'lavender010101/spaceline.vim'
 	
-	" Plug 'theniceboy/eleline.vim'
-	" Plug 'ojroques/vim-scrollstatus'
+	Plug 'theniceboy/eleline.vim'
+	Plug 'ojroques/vim-scrollstatus'
 	" <<<<< status line <<<<<
 
 	" >>>>> tabs  >>>>>
@@ -76,7 +76,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 	Plug 'wakatime/vim-wakatime' " coding statistic
 
-    Plug 'mhinz/vim-startify' " fast open history files
+    " Plug 'mhinz/vim-startify' " fast open history files
 
     Plug 'airblade/vim-gitgutter' " show git status
 	" <<<<< other enhance <<<<<
