@@ -42,13 +42,13 @@ set cursorline
 " ===== color =====
 " === deus ===
 "color deus
-set t_Co=256
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set background=dark    " Setting dark mode
-colorscheme deus
-let g:deus_termcolors=256
+" set t_Co=256
+" set termguicolors
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" set background=dark    " Setting dark mode
+" colorscheme deus
+" let g:deus_termcolors=256
 
 " === gruvbox ===
 " if (empty($TMUX))
@@ -59,10 +59,10 @@ let g:deus_termcolors=256
 "     set termguicolors
 "   endif
 " endif
-" color gruvbox
-" let g:gruvbox_termcolors=16
-" set termguicolors " enable true colors support
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+color gruvbox
+let g:gruvbox_termcolors=16
+set termguicolors " enable true colors support
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " ===
 " ==== Terminal Colors
@@ -224,7 +224,7 @@ set hidden " alllow user jump to another file while editing current file
 " ===
 " ==== environment
 " ===
-let g:python3_host_prog = '/opt/miniconda3/bin/python'
+let g:python3_host_prog = 'python'
 
 
 
@@ -259,7 +259,7 @@ set shortmess+=c
 " ==== default setting
 " ===
 " === browser ===
-let g:browser='google-chrome-stable'
+" let g:browser='google-chrome-stable'
 " let g:mkdp_browser='chrome'
 
 " === file encoding ===
