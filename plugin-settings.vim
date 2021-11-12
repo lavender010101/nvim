@@ -8,7 +8,6 @@ let g:xtabline_settings.tabline_modes = ['tabs', 'buffers']
 let g:xtabline_settings.enable_persistance = 0
 let g:xtabline_settings.last_open_first = 1
 
-au BufEnter * exec "call SetBufferName()"
 func! SetBufferName()
 	let s:file_name=expand('%')
 	" let s:file_path=expand('%:p:h:t')
@@ -24,6 +23,10 @@ let g:spaceline_colorscheme = 'default'
 let g:spaceline_lsp_executive = 'coc' " show lsp status
 let g:spaceline_diff_tool = 'git-gutter' " show git status
 " <<<<< lavender010101/spaceline.vim <<<<<
+
+" >>>>> theniceboy/eleline.vim >>>>>
+let g:airline_powerline_font = 0
+" <<<<< theniceboy/eleline.vim <<<<<
 
 " >>>>> airblade/vim-gitgutter (git status) >>>>>
 let g:gitgutter_sign_allow_clobber = 0

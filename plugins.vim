@@ -16,9 +16,12 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'nvim-treesitter/nvim-treesitter'
 	" <<<<< theme and colorscheme <<<<<
 	
-	" >>>>> bottom line >>>>>
+	" >>>>> status line >>>>>
 	Plug 'lavender010101/spaceline.vim'
-	" <<<<< bottom line <<<<<
+	
+	" Plug 'theniceboy/eleline.vim'
+	" Plug 'ojroques/vim-scrollstatus'
+	" <<<<< status line <<<<<
 
 	" >>>>> tabs  >>>>>
     Plug 'mg979/vim-xtabline'
