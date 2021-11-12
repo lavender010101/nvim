@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" >>>>> theme and colorscheme >>>>>
 	" Plug 'morhetz/gruvbox' " theme and colorscheme
 	Plug 'theniceboy/nvim-deus'
+	Plug 'nvim-treesitter/nvim-treesitter'
 	" <<<<< theme and colorscheme <<<<<
 	
 	" >>>>> bottom line >>>>>
