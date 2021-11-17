@@ -20,7 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" Plug 'lavender010101/spaceline.vim'
 	
 	Plug 'theniceboy/eleline.vim'
-	Plug 'ojroques/vim-scrollstatus'
+	" Plug 'ojroques/vim-scrollstatus'
 	" <<<<< status line <<<<<
 
 	" >>>>> tabs  >>>>>
@@ -93,13 +93,13 @@ call plug#begin('~/.config/nvim/plugged')
 	" ==== css
 	" ===
 	" Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'yarn install'}
-    Plug 'hail2u/vim-css3-syntax'
+	Plug 'hail2u/vim-css3-syntax', {'for': 'css'}
 
 
 	" ===
 	" ==== go
 	" ===
-	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+	Plug 'fatih/vim-go', { 'for':'go', 'do': ':GoUpdateBinaries' }
 
 	
 	" ===
@@ -119,7 +119,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== json
 	" ===
-	Plug 'elzr/vim-json'
+	Plug 'elzr/vim-json', {'for': 'json'}
     " Plug 'neoclide/jsonc.vim'
 
 
@@ -128,7 +128,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 	Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
-	Plug 'joker1007/vim-markdown-quote-syntax'
+	Plug 'joker1007/vim-markdown-quote-syntax', {'for': 'markdown'}
 
 
 	" ===
