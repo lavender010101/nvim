@@ -120,10 +120,12 @@ let g:bullets_enabled_file_types = [
 " >>>>> tomtom/tcomment_vim (comment lines or block) >>>>>
 nnoremap ci cl
 let g:tcomment_textobject_inlinecomment = ''
-nmap <LEADER>cn g>c
-vmap <LEADER>cn g>
-nmap <LEADER>cu g<c
-vmap <LEADER>cu g<
+nmap <a-/> gcc
+vmap <a-/> gc
+" nmap <LEADER>cn g>c
+" vmap <LEADER>cn g>
+" nmap <LEADER>cu g<c
+" vmap <LEADER>cu g<
 " <<<<< tomtom/tcomment_vim <<<<<
 
 " >>>>> dhruvasagar/vim-table-mode (align items in form) >>>>>
