@@ -147,7 +147,8 @@ set list
 set listchars=tab:\|\ ,trail:▫
 " <<<<< indent <<<<<
 
-" >>>>> fold >>>>>
+" >>>>> view options >>>>>
+set viewoptions=cursor,folds,slash,unix
 set foldenable
 set foldlevel=99
 set foldmethod=indent
@@ -156,7 +157,7 @@ noremap <silent> <LEADER>o za
 " wrap
 set wrap
 " set colorcolumn=100
-" <<<<< fold <<<<<
+" <<<<< view options <<<<<
 
 " >>>>> mouse >>>>>
 " options: a->Normal v->Visual i->Insert c->Command h->Help a->nvich(All)
