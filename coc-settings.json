@@ -181,7 +181,7 @@
 	"list.nextKeymap": "<C-j>",
 	"list.previousKeymap": "<C-k>",
 
-	"prettier.printWidth": 100,
+	"prettier.printWidth": 120,
 	"prettier.eslintIntegration": true,
 	"prettier.disableLanguages": [],
 	"prettier.formatterPriority": 1,
