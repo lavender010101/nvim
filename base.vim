@@ -222,10 +222,6 @@ set hidden " alllow user jump to another file while editing current file
 " <<<<< buffer <<<<<
 
 
-" ===
-" ==== environment
-" ===
-let g:python3_host_prog = '/opt/miniconda3/bin/python'
 
 
 
@@ -255,13 +251,6 @@ set shortmess+=c
 
 
 
-
-" ===
-" ==== default setting
-" ===
-" === browser ===
-let g:browser='google-chrome-stable'
-" let g:mkdp_browser='chrome'
 
 " === file encoding ===
 set fileencodings=utf-8,gbk,gb2312,cp936
