@@ -50,11 +50,15 @@
 	"html.enable": true,
 	"html.format.enable": true,
 
-	"java.home": "/opt/JDK/jdk-11.0.11+0",
+	"java.home": "path to default jdk",
 	"java.configuration.runtimes": [
 		{
 			"name": "JavaSE-11",
-			"path": "/opt/JDK/jdk-11.0.11+0",
+			"path": "path to jdk11"
+		},
+		{
+			"name": "JavaSE-17",
+			"path": "path to jdk17",
 			"default": true
 		}
 	],
