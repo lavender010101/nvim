@@ -1,0 +1,12 @@
+" ===
+" ==== Python
+" ===
+let g:python2_host_prog = 'path to python2'
+let g:python3_host_prog = 'path to python3'
+
+
+
+" ===
+" ==== browser
+" ===
+let g:browser='path to default browser'
