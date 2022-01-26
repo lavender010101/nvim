@@ -259,3 +259,16 @@ set encoding=utf-8
 
 " === input ===
 set ttimeoutlen=50
+
+
+
+
+
+
+" ===
+" ==== fcitx5
+" ===
+autocmd InsertLeave * :silent !fcitx5-remote -c " change to english while exit `insert mode`
+autocmd BufCreate *  :silent !fcitx5-remote -c " stop fcitx5 while creating buffer
+autocmd BufEnter *  :silent !fcitx5-remote -c " stop fcitx5 while get in buffer
+autocmd BufLeave *  :silent !fcitx5-remote -c " stop fcitx5 while leaving buffer
