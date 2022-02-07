@@ -18,7 +18,6 @@ let g:coc_global_extensions = [
 	\ 'coc-snippets',
 	\ 'coc-syntax',
 	\ 'coc-tailwindcss',
-	\ 'coc-translator',
 	\ 'coc-tsserver',
 	\ 'coc-vetur',
 	\ 'coc-vimlsp',
@@ -39,6 +38,7 @@ let g:coc_global_extensions = [
 	" \ 'coc-stylelint',
 	" \ 'coc-tailwindcss',
 	" \ 'coc-tasks',
+	" \ 'coc-translator',
 	" \ 'coc-tslint-plugin',
 " <<<<< global extensions <<<<<
 
@@ -117,8 +117,8 @@ let g:snips_author = 'lavender010101'
 " ==== coc-translator
 " ===
 " popup
-nmap ts <Plug>(coc-translator-p)
-vmap ts <Plug>(coc-translator-pv)
+" nmap ts <Plug>(coc-translator-p)
+" vmap ts <Plug>(coc-translator-pv)
 " nmap tsp <Plug>(coc-translator-p)
 " vmap tsp <Plug>(coc-translator-pv)
 " " echo

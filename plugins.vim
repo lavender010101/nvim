@@ -79,6 +79,10 @@ call plug#begin('~/.config/nvim/plugged')
     " Plug 'mhinz/vim-startify' " fast open history files
 
     Plug 'airblade/vim-gitgutter' " show git status
+
+
+	" Translator
+	Plug 'voldikss/vim-translator'
 	" <<<<< other enhance <<<<<
 
 

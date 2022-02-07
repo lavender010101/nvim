@@ -72,6 +72,20 @@ EOF
 
 
 
+" #####################################
+" ########## Efficient Tools ##########
+" #####################################
+" let g:translator_default_engines = [ 'bing', 'google', 'haici']
+let g:translator_default_engines = [ 'google', 'haici']
+" Display translation in a window
+nmap <silent> ts <Plug>TranslateW
+vmap <silent> ts <Plug>TranslateWV
+" Replace the text with translation
+nmap <silent> tr <Plug>TranslateR
+vmap <silent> tr <Plug>TranslateRV
+
+
+
 
 " ####################################
 " ########## Coding Enhance ##########
