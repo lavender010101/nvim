@@ -18,6 +18,7 @@ let g:coc_global_extensions = [
 	\ 'coc-snippets',
 	\ 'coc-syntax',
 	\ 'coc-tailwindcss',
+	\ 'coc-translator',
 	\ 'coc-tsserver',
 	\ 'coc-vetur',
 	\ 'coc-vimlsp',
@@ -38,7 +39,6 @@ let g:coc_global_extensions = [
 	" \ 'coc-stylelint',
 	" \ 'coc-tailwindcss',
 	" \ 'coc-tasks',
-	" \ 'coc-translator',
 	" \ 'coc-tslint-plugin',
 " <<<<< global extensions <<<<<
 
@@ -117,23 +117,23 @@ let g:snips_author = 'lavender010101'
 " ==== coc-translator
 " ===
 " popup
-" nmap ts <Plug>(coc-translator-p)
-" vmap ts <Plug>(coc-translator-pv)
-" nmap tsp <Plug>(coc-translator-p)
-" vmap tsp <Plug>(coc-translator-pv)
-" " echo
-" nmap tse <Plug>(coc-translator-e)
-" vmap tse <Plug>(coc-translator-ev)
-" " replace
-" nmap tsr <Plug>(coc-translator-r)
-" vmap tsr <Plug>(coc-translator-rv)
+nmap ts <Plug>(coc-translator-p)
+vmap ts <Plug>(coc-translator-pv)
+nmap tsp <Plug>(coc-translator-p)
+vmap tsp <Plug>(coc-translator-pv)
+" echo
+nmap tse <Plug>(coc-translator-e)
+vmap tse <Plug>(coc-translator-ev)
+" replace
+nmap tsr <Plug>(coc-translator-r)
+vmap tsr <Plug>(coc-translator-rv)
 
 
 " ===
 " ==== coc-prettier
 " ===
 " command! -nargs=0 Prettier :CocCommand prettier.formatFile
-nmap <C-f> :CocCommand prettier.formatFile<CR>
+" nmap <C-f> :CocCommand prettier.formatFile<CR>
 
 
 
@@ -151,3 +151,22 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)w
 " ===
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
 " autocmd BufRead,BufNewFile *.json set filetype=jsonc
+
+
+
+
+
+
+" ===
+" ==== 
+" ===
+nmap <C-f> <plug>(coc-format)
+command! -nargs=0 Format :call CocAction('format')
+
+
+
+
+" ===
+" ==== coc-yank
+" ===
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
