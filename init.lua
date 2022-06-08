@@ -1,4 +1,5 @@
-require('base')
+require('user.options')
+require('user.keymaps')
+
 require('plugins')
-require('keymaps')
 require('plugins.gitsigns')
