@@ -4,14 +4,14 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
+    'git',
+    'clone',
+    '--depth',
+    '1',
+    'https://github.com/wbthomason/packer.nvim',
     install_path,
   }
-  print "Installing packer close and reopen Neovim..."
+  print 'Installing packer close and reopen Neovim...'
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -27,7 +27,7 @@ vim.cmd [[
 
 
 -- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
+local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
   return
 end
@@ -37,14 +37,20 @@ packer.init {
   compile_path = require('packer.util').join_paths(vim.fn.stdpath('config'), 'plugins', 'packer_compiled.lua'),
   display = {
     open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+      return require('packer.util').float { border = "rounded" }
     end,
   },
 }
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'theniceboy/nvim-deus'
+  use 'wbthomason/packer.nvim' -- Have packer manage itself
+  use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
+  use 'nvim-lua/plenary.nvim' -- Useful lua functions used ny lots of plugins
+
+  ----- appearance -----
+  use 'theniceboy/nvim-deus'  -- colorscheme
+  -- using packer.nvim
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
   
 
   -- LSP
