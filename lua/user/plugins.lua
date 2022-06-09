@@ -74,7 +74,6 @@ return require('packer').startup(function(use)
   --- snippets
   use 'L3MON4D3/LuaSnip' --snippet engine
   use 'rafamadriz/friendly-snippets' -- a bunch of snippets to use
-  
 
   -- Load on an autocommand event
   use {'andymass/vim-matchup', event = 'VimEnter'}
