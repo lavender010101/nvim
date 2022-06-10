@@ -30,10 +30,18 @@ keymap("n", "H", "5h", opts)
 keymap("n", "J", "5j", opts)
 keymap("n", "K", "5k", opts)
 keymap("n", "L", "5l", opts)
-
 keymap("n", "W", "5w", opts)
 keymap("n", "B", "5b", opts)
-
 keymap("n", ";", "0", opts)
 keymap("n", "'", "$", opts)
+
+keymap("v", "H", "5h", opts)
+keymap("v", "J", "5j", opts)
+keymap("v", "K", "5k", opts)
+keymap("v", "L", "5l", opts)
+keymap("v", "W", "5w", opts)
+keymap("v", "B", "5b", opts)
+keymap("v", ";", "0", opts)
+keymap("v", "'", "$", opts)
+
 
