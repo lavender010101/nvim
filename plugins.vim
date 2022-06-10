@@ -24,7 +24,11 @@ call plug#begin('~/.config/nvim/plugged')
 	" <<<<< status line <<<<<
 
 	" >>>>> tabs  >>>>>
-    Plug 'mg979/vim-xtabline'
+    " Plug 'mg979/vim-xtabline'
+	
+    Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+    " Plug 'ryanoasis/vim-devicons' Icons without colours
+    Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 	" <<<<< tabs <<<<<
 
 	" >>>>> icons >>>>>
@@ -130,9 +134,9 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== markdown
 	" ===
-	Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-	Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
-	Plug 'joker1007/vim-markdown-quote-syntax', {'for': 'markdown'}
+	" Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+	" Plug 'mzlogin/vim-markdown-toc', {'for': ['gitignore', 'markdown', 'vim-plug']}
+	" Plug 'joker1007/vim-markdown-quote-syntax', {'for': 'markdown'}
 
 
 	" ===

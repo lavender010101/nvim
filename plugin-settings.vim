@@ -1,21 +1,28 @@
 " ################################
 " ########## Appearence ##########
 " ################################
-" >>>>> mg979/vim-xtabline (tabs)>>>>>
-let g:xtabline_settings = {}
-let g:xtabline_settings.enable_mappings = 0
-let g:xtabline_settings.tabline_modes = ['tabs', 'buffers']
-let g:xtabline_settings.enable_persistance = 0
-let g:xtabline_settings.last_open_first = 1
 
-func! SetBufferName()
-	let s:file_name=expand('%')
-	" let s:file_path=expand('%:p:h:t')
-	" let s:buffer_title=s:file_path.'/'.s:file_name
-	" call xtabline#cmds#run("name_tab", expand('%:p:h:t'))
-	call xtabline#cmds#run("name_tab", s:file_name)
-endfunc
-" <<<<< mg979/vim-xtabline <<<<<
+" >>>>> akinsho/bufferline.nvim >>>>>
+lua << EOF
+	require("bufferline").setup{}
+EOF
+" <<<<< akinsho/bufferline.nvim <<<<<
+
+" " >>>>> mg979/vim-xtabline (tabs)>>>>>
+" let g:xtabline_settings = {}
+" let g:xtabline_settings.enable_mappings = 0
+" let g:xtabline_settings.tabline_modes = ['tabs', 'buffers']
+" let g:xtabline_settings.enable_persistance = 0
+" let g:xtabline_settings.last_open_first = 1
+" 
+" func! SetBufferName()
+" 	let s:file_name=expand('%')
+" 	" let s:file_path=expand('%:p:h:t')
+" 	" let s:buffer_title=s:file_path.'/'.s:file_name
+" 	" call xtabline#cmds#run("name_tab", expand('%:p:h:t'))
+" 	call xtabline#cmds#run("name_tab", s:file_name)
+" endfunc
+" " <<<<< mg979/vim-xtabline <<<<<
 
 " >>>>> lavender010101/spaceline.vim (bottom line)>>>>>
 let g:spaceline_seperate_style = 'arrow-fade'
