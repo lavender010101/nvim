@@ -16,6 +16,11 @@ noremap B 5b
 
 noremap ; 0
 noremap ' $
+
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 " <<<<< cursor motion <<<<<
 
 
