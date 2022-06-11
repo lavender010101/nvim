@@ -117,6 +117,12 @@ call plug#begin('~/.config/nvim/plugged')
 
 
 	" ===
+	" ==== java
+	" ===
+    Plug 'mfussenegger/nvim-jdtls'
+
+	
+	" ===
 	" ==== javascript
 	" ===
     " Plug 'pangloss/vim-javascript'
