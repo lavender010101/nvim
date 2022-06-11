@@ -1,7 +1,7 @@
-source plugins.vim
-source plugin-settings.vim
-source base.vim
-source coc-settings.vim
-source functions.vim
+source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/plugin-settings.vim
+source $HOME/.config/nvim/base.vim
+source $HOME/.config/nvim/coc-settings.vim
+source $HOME/.config/nvim/functions.vim
 
-source snippets.vim
+source $HOME/.config/nvim/snippets.vim
