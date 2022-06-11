@@ -119,7 +119,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== java
 	" ===
-    Plug 'mfussenegger/nvim-jdtls'
+    " Plug 'mfussenegger/nvim-jdtls'
 
 	
 	" ===
