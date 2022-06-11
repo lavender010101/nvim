@@ -5,10 +5,11 @@ local keymap = vim.api.nvim_set_keymap
 
 
 
-keymap("n", "r", ":lua code_runner()<CR>",opts)
+keymap("n", "rr", ":lua code_runner()<CR>",opts)
 function code_runner()
     vim.cmd "w"
 
+    vim.cmd "sp"
     if vim.o.filetype == 'lua' then
        print(vim.o.filetype)
 

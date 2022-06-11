@@ -7,8 +7,10 @@ local keymap = vim.api.nvim_set_keymap
 
 -- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+-- keymap("", "r", "<Nop>", opts)
+vim.g.mapleader = "<Space>"
+vim.g.maplocalleader = "<Space>"
+vim.g.leader = "<Space>"
 
 -- Modes
 --   normal_mode = "n",
