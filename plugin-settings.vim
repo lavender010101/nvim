@@ -55,12 +55,9 @@ function! StartifyEntryFormat()
 endfunction
 " <<<<< vim-devicons <<<<<
 
-" >>>>> Yggdroot/indentLine (show indent) >>>>>
-autocmd FileType json,markdown let g:indentLine_conceallevel = 0 " restore double quote
-" <<<<< Yggdroot/indentLine <<<<<
 
 " >>>>> elzr/vim-json >>>>>
-autocmd FileType json,markdown let g:vim_json_syntax_conceal = 0
+autocmd FileType json,markdown let g:indentLine_conceallevel = 0 " restore double quote
 " <<<<< elzr/vim-json <<<<<
 
 
