@@ -149,6 +149,24 @@ vmap <a-/> gc
 " >>>>> dhruvasagar/vim-table-mode (align items in form) >>>>>
 noremap <LEADER>tm :TableModeToggle<CR>
 let g:table_mode_cell_text_object_i_map = 'k<Bar>'
+
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar='='
+
+" Other toggle in insert mode
+function! s:isAtStartOfLine(mapping)
+  let text_before_cursor = getline('.')[0 : col('.')-1]
+  let mapping_pattern = '\V' . escape(a:mapping, '\')
+  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+endfunction
+
+inoreabbrev <expr> <bar><bar>
+          \ <SID>isAtStartOfLine('\|\|') ?
+          \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+inoreabbrev <expr> __
+          \ <SID>isAtStartOfLine('__') ?
+          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
 " <<<<< dhruvasagar/vim-table-mode <<<<<
 
 
