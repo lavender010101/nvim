@@ -150,8 +150,8 @@ vmap <a-/> gc
 noremap <LEADER>tm :TableModeToggle<CR>
 let g:table_mode_cell_text_object_i_map = 'k<Bar>'
 
-let g:table_mode_corner_corner='+'
-let g:table_mode_header_fillchar='='
+" let g:table_mode_corner_corner='+'
+" let g:table_mode_header_fillchar='='
 
 " Other toggle in insert mode
 function! s:isAtStartOfLine(mapping)
