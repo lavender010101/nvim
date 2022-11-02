@@ -149,7 +149,7 @@ set softtabstop=4
 
 " show space and tab characters
 set list
-set listchars=tab:\|\ ,trail:▫
+set listchars=tab:<->,trail:▫
 " <<<<< indent <<<<<
 
 " >>>>> view options >>>>>
