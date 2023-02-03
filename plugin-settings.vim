@@ -62,15 +62,18 @@ autocmd FileType json,markdown let g:indentLine_conceallevel = 0 " restore doubl
 
 
 " >>>>> nvim-treesitter/nvim-treesitter >>>>>
+if g:nvim_plugins_installation_completed == 1
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"typescript", "dart", "java"},     -- one of "all", "language", or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
-  },
+	-- one of "all", "language", or a list of languages
+	ensure_installed = {"typescript", "dart", "java", "c", "prisma", "bash", "go"},
+	highlight = {
+		enable = true,              -- false will disable the whole extension
+		disable = { "rust" },  -- list of language that will be disabled
+	},
 }
 EOF
+endif
 " <<<<< nvim-treesitter/nvim-treesitter <<<<<
 
 
