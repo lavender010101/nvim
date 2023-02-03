@@ -78,7 +78,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 	Plug 'liuchengxu/vista.vim' " show variables and functions
 
-	Plug 'wakatime/vim-wakatime' " coding statistic
+	" Plug 'wakatime/vim-wakatime' " coding statistic
 
     " Plug 'mhinz/vim-startify' " fast open history files
 
