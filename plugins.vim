@@ -28,7 +28,7 @@ call plug#begin('~/.config/nvim/plugged')
 	
     Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
     " Plug 'ryanoasis/vim-devicons' Icons without colours
-    Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+    " Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 	" <<<<< tabs <<<<<
 
 	" >>>>> icons >>>>>
@@ -107,7 +107,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" ===
 	" ==== go
 	" ===
-	Plug 'fatih/vim-go', { 'for':'go', 'do': ':GoUpdateBinaries' }
+	" Plug 'fatih/vim-go', { 'for':'go', 'do': ':GoUpdateBinaries' }
 
 	
 	" ===

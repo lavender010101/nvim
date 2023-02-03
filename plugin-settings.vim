@@ -3,9 +3,9 @@
 " ################################
 
 " >>>>> akinsho/bufferline.nvim >>>>>
-lua << EOF
-	require("bufferline").setup{}
-EOF
+" lua << EOF
+	" require("bufferline").setup{}
+" EOF
 " <<<<< akinsho/bufferline.nvim <<<<<
 
 " " >>>>> mg979/vim-xtabline (tabs)>>>>>
