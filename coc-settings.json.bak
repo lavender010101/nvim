@@ -182,7 +182,7 @@
 		"pp": "pasteFile",
 		"dD": "deleteForever",
 		"a": "addFile",
-		"M": "addDirectory",
+		"A": "addDirectory",
 		"rn": "rename",
 		".": "toggleHidden",
 		"zh": "toggleHidden",
