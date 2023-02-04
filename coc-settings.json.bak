@@ -154,12 +154,6 @@
 			"cd",
 			"open"
 		],
-		"<cr>": [
-			"wait",
-			"expandable?",
-			"expand",
-			"open"
-		],
 		"s": "open:vsplit",
 		"S": "open:split",
 		"e": "open:tab",
@@ -172,6 +166,21 @@
 				"collapse",
 				"expand"
 			]
+		],
+		"<cr>": [
+			"wait",
+			"expandable?",
+			"expand",
+			"open"
+		],
+		"<2-LeftMouse>": [
+			"expandable?",
+			[
+				"expanded?",
+				"collapse",
+				"expand"
+			],
+			"open"
 		],
 		"gl": "expand:recursive",
 		"gh": "collapse:recursive",
