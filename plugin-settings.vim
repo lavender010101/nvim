@@ -103,6 +103,31 @@ vmap <silent> tr <Plug>TranslateRV
 " >>>>> luochen1990/rainbow (rainbow brackets) >>>>>
 let g:rainbow_active = 1
 " <<<<< luochen1990/rainbow <<<<<
+"
+" >>>>> alvan/vim-closetag >>>>>
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+"
+" let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+" filenames like *.xml, *.xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+" let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+
+" filetypes like xml, html, xhtml, ...
+" These are the file types where this plugin is enabled.
+"
+let g:closetag_filetypes = 'html,xhtml,phtml,xml'
+
+" filetypes like xml, xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+" let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+
+"<<<<< alvan/vim-closetag <<<<<
+
+
 
 " >>>>> liuchengxu/vista.vim (list variables and functions) >>>>>
 noremap tg :Vista!!<CR>
