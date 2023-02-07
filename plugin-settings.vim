@@ -103,7 +103,18 @@ vmap <silent> tr <Plug>TranslateRV
 " >>>>> luochen1990/rainbow (rainbow brackets) >>>>>
 let g:rainbow_active = 1
 " <<<<< luochen1990/rainbow <<<<<
-"
+
+
+
+" >>>>> vim-autoformat/vim-autoformat (auto formatter) >>>>>
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+" <<<<< vim-autoformat/vim-autoformat <<<<<
+
+
+
+
 " >>>>> alvan/vim-closetag >>>>>
 " filenames like *.xml, *.html, *.xhtml, ...
 " These are the file extensions where this plugin is enabled.
@@ -144,6 +155,7 @@ let g:vista#renderer#icons = {
 \   "variable": "\uf71b",
 \  }
 " <<<<< liuchengxu/vista.vim <<<<<
+
 
 " >>>>> RRethy/vim-hexokinase (preview colors in editor) >>>>>
 let g:Hexokinase_highlighters = ['backgroundfull'] " options: 'virtual' 'sign_column' 'foreground[full]' 'background[full]'

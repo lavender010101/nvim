@@ -61,6 +61,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" >>>>> code formatter >>>>>
 	" Plug 'google/vim-maktaba' " depended by vim-codefmt
 	" Plug 'google/vim-codefmt'
+	Plug 'vim-autoformat/vim-autoformat'
 	" <<<<< code formatter <<<<<
 
 	" >>>>> highlighting and prompt >>>>>
