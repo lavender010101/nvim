@@ -1,3 +1,4 @@
 plugged
 *.json
 envs.vim
+.DS_Store
