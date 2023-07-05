@@ -21,7 +21,8 @@ vim.o.autoindent = true
 
 vim.o.list = true
 -- TODO change indent symbol
-vim.o.listchars = 'tab:|\\ ,trail:▫'
+-- vim.o.listchars = 'tab:|\\ ,trail:▫'
+vim.o.listchars = "tab:<->,trail:▫"
 -- <<<<< indent <<<<<
 
 
