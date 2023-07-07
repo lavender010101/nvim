@@ -49,12 +49,10 @@ M.config = {
 			local lsp = require('lsp-zero').preset({})
 			M.lsp = lsp
 
-			lsp.ensure_installed({
-				'tsserver',
-				'eslint',
-				'gopls',
-				'jsonls',
-			})
+			-- lsp.ensure_installed({
+			-- 	'tsserver',
+			-- 	'eslint',
+			-- })
 
 			-- F.configureInlayHints()
 
@@ -112,9 +110,12 @@ M.config = {
 
 			-- require("config.lsp.flutter").setup(lsp)
 			-- require("config.lsp.html").setup(lspconfig, lsp)
-			require("config.lsp.java").setup(lspconfig, lsp)
-			require("config.lsp.json").setup(lspconfig, lsp)
-			require("config.lsp.lua").setup(lspconfig, lsp)
+			require("config.lsp.jdtls").setup(lspconfig, lsp)
+			require("config.lsp.jsonls").setup(lspconfig, lsp)
+			require("config.lsp.lua_ls").setup(lspconfig, lsp)
+			require("config.lsp.bashls").setup(lspconfig, lsp)
+			require("config.lsp.pyright").setup(lspconfig, lsp)
+			require("config.lsp.tsserver").setup(lspconfig, lsp)
 
 			lsp.setup()
 			require("fidget").setup({})
@@ -132,10 +133,13 @@ M.config = {
 			F.configureKeybinds()
 
 			local format_on_save_filetypes = {
-				dart = true,
-				json = true,
+				-- 	dart = true,
 				go = true,
+				java = true,
+				json = true,
 				lua = true,
+				python = true,
+				sh = true,
 			}
 
 			vim.api.nvim_create_autocmd("BufWritePre", {
