@@ -1,6 +1,9 @@
 return {
 	setup = function(lspconfig, lsp)
-		lspconfig.jsonls.setup({
+		lsp.ensure_installed({
+			'gopls'
+		})
+		lspconfig.gopls.setup({
 			on_attach = function()
 			end,
 		})
