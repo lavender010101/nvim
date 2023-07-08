@@ -28,13 +28,13 @@ M.config = {
 				require("lspkind").init()
 			end
 		},
-		{
-			"quangnguyen30192/cmp-nvim-ultisnips",
-			config = function()
-				-- optional call to setup (see customization section)
-				require("cmp_nvim_ultisnips").setup {}
-			end,
-		},
+		-- {
+		--	"quangnguyen30192/cmp-nvim-ultisnips",
+		--	config = function()
+		--		-- optional call to setup (see customization section)
+		--		require("cmp_nvim_ultisnips").setup {}
+		--	end,
+		--},
 		{
 			"L3MON4D3/LuaSnip",
 			dependencies = {
@@ -44,7 +44,7 @@ M.config = {
 			config = function()
 				require("luasnip.loaders.from_vscode").lazy_load({
 					paths = {
-						"$HOME/.config/nvim/snippets"
+						"$HOME/.config/nvim/custom_snippets"
 					}
 				})
 			end,
