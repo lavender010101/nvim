@@ -6,6 +6,11 @@ return {
 		priority = 1000,
 		build = ":TSUpdate",
 		config = function()
+			-- list of language that will be disabled
+			local disable_languages = {
+				"python",
+			}
+
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
 					"bash",
@@ -21,9 +26,25 @@ return {
 					"typescript",
 					"vim"
 				},
+				auto_install = true, -- enable auto install hightlight
+
+
+
 				highlight = {
 					enable = true,
-					disable = {}, -- list of language that will be disabled
+
+
+					disable = function(lang, buf)
+						if disable_languages[lang] ~= nil then
+							return true
+						end
+
+						local max_filesize = 100 * 1024 -- 100 KB
+						local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+						if ok and stats and stats.size > max_filesize then
+							return true
+						end
+					end,
 				},
 				indent = {
 					enable = false
