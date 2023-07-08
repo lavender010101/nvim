@@ -12,7 +12,8 @@ end
 local M = {}
 M.config = {
 	"hrsh7th/nvim-cmp",
-	after = "SirVer/ultisnips",
+	-- after = "SirVer/ultisnips",
+	after = "L3MON4D3/LuaSnip",
 	dependencies = {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
@@ -34,7 +35,22 @@ M.config = {
 				require("cmp_nvim_ultisnips").setup {}
 			end,
 		},
-		-- "L3MON4D3/LuaSnip",
+		{
+			"L3MON4D3/LuaSnip",
+			dependencies = {
+				"saadparwaiz1/cmp_luasnip",
+				"rafamadriz/friendly-snippets",
+			},
+			config = function()
+				require("luasnip.loaders.from_vscode").lazy_load({
+					paths = {
+						"$HOME/.config/nvim/snippets"
+					}
+				})
+			end,
+		}
+
+		--{ "rafamadriz/friendly-snippets" },
 	},
 }
 
@@ -84,16 +100,16 @@ M.configfunc = function()
 	local lspkind = require("lspkind")
 	vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 	local cmp = require("cmp")
-	local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
-	-- local luasnip = require("luasnip")
+	-- local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
+	local luasnip = require("luasnip")
 
 	setCompHL()
 	cmp.setup({
 		preselect = cmp.PreselectMode.None,
 		snippet = {
 			expand = function(args)
-				-- luasnip.lsp_expand(args.body)
-				vim.fn["UltiSnips#Anon"](args.body)
+				luasnip.lsp_expand(args.body)
+				-- vim.fn["UltiSnips#Anon"](args.body)
 			end,
 		},
 		window = {
@@ -127,30 +143,34 @@ M.configfunc = function()
 			{ name = "path" },
 			{ name = "nvim_lua" },
 			-- { name = "calc" },
-			-- { name = "luasnip" },
+			{ name = "luasnip" },
+			-- { name = "friendly'},
 			-- { name = 'tmux',    option = { all_panes = true, } },  -- this is kinda slow
 		}),
 		mapping = cmp.mapping.preset.insert({
-			['<C-o>'] = cmp.mapping.complete(),
-			["<c-e>"] = cmp.mapping(
-				function()
-					cmp_ultisnips_mappings.compose { "expand", "jump_forwards" } (function() end)
-				end,
-				{ "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
-			),
-			["<c-n>"] = cmp.mapping(
-				function(fallback)
-					cmp_ultisnips_mappings.jump_backwards(fallback)
-				end,
-				{ "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
-			),
-			['<c-f>'] = cmp.mapping({
-				i = function(fallback)
-					cmp.close()
-					fallback()
-				end
-			}),
-			['<c-y>'] = cmp.mapping({ i = function(fallback) fallback() end }),
+			-- ['<C-o>'] = cmp.mapping.complete(),
+			['<C-e>'] = cmp.mapping.complete(),
+			-- ["<c-e>"] = cmp.mapping(
+			-- 	function()
+			-- 		-- cmp_ultisnips_mappings.compose { "expand", "jump_forwards" } (function() end)
+			-- 		cmp_ultisnips_mappings.compose { "expand", "jump_forwards" } (function() end)
+			-- 	end,
+			-- 	{ "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
+			-- ),
+			-- ["<c-n>"] = cmp.mapping(
+			-- 	function(fallback)
+			-- 		-- cmp_ultisnips_mappings.jump_backwards(fallback)
+			-- 		cmp_ultisnips_mappings.jump_backwards(fallback)
+			-- 	end,
+			-- 	{ "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
+			-- ),
+			-- ['<c-f>'] = cmp.mapping({
+			-- 	i = function(fallback)
+			-- 		cmp.close()
+			-- 		fallback()
+			-- 	end
+			-- }),
+			-- ['<c-y>'] = cmp.mapping({ i = function(fallback) fallback() end }),
 			['<CR>'] = cmp.mapping({
 				i = function(fallback)
 					if cmp.visible() and cmp.get_active_entry() then
