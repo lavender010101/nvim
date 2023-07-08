@@ -8,6 +8,14 @@ return {
 		lspconfig.pyright.setup({
 			on_attach = function()
 			end,
+
+			settings = {
+				python = {
+					analysis = {
+						typeCheckingMode = "off",
+					},
+				},
+			},
 		})
 	end
 }
