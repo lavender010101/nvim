@@ -33,7 +33,7 @@ M.config = {
 				-- optional call to setup (see customization section)
 				require("cmp_nvim_ultisnips").setup {}
 			end,
-		}
+		},
 		-- "L3MON4D3/LuaSnip",
 	},
 }
@@ -123,10 +123,10 @@ M.configfunc = function()
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
 			{ name = "buffer" },
-		}, {
+			-- }, {
 			{ name = "path" },
 			{ name = "nvim_lua" },
-			{ name = "calc" },
+			-- { name = "calc" },
 			-- { name = "luasnip" },
 			-- { name = 'tmux',    option = { all_panes = true, } },  -- this is kinda slow
 		}),

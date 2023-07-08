@@ -7,6 +7,11 @@ M.config = {
 		'weilbith/nvim-code-action-menu',
 		cmd = 'CodeActionMenu',
 	},
+	-- formatting
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
@@ -42,7 +47,6 @@ M.config = {
 				"lvimuser/lsp-inlayhints.nvim",
 				branch = "anticonceal",
 			},
-			-- "mjlbach/lsp_signature.nvim",
 		},
 
 		config = function()
@@ -108,12 +112,12 @@ M.config = {
 
 			local lspconfig = require('lspconfig')
 
+			require("config.lsp.bashls").setup(lspconfig, lsp)
 			-- require("config.lsp.flutter").setup(lsp)
 			-- require("config.lsp.html").setup(lspconfig, lsp)
 			require("config.lsp.jdtls").setup(lspconfig, lsp)
 			require("config.lsp.jsonls").setup(lspconfig, lsp)
 			require("config.lsp.lua_ls").setup(lspconfig, lsp)
-			require("config.lsp.bashls").setup(lspconfig, lsp)
 			require("config.lsp.pyright").setup(lspconfig, lsp)
 			require("config.lsp.tsserver").setup(lspconfig, lsp)
 
@@ -138,7 +142,7 @@ M.config = {
 				java = true,
 				json = true,
 				lua = true,
-				python = true,
+				-- python = true,
 				sh = true,
 			}
 
