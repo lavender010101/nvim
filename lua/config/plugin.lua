@@ -47,6 +47,7 @@ require("lazy").setup({
 	require("config.plugins.lspconfig").config,
 	-- require("config.plugins.markdown"),
 	require("config.plugins.notify"),
+	require("config.plugins.nvim-tree"),
 	-- require("config.plugins.project"),
 	-- require("config.plugins.scrollbar"),
 	-- require("config.plugins.search"),
