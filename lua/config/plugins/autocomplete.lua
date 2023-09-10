@@ -36,7 +36,9 @@ M.config = {
 				-- optional call to setup (see customization section)
 				require("cmp_nvim_ultisnips").setup {}
 			end,
-		}
+		},
+
+
 		--[[
 		{ "honza/vim-snippets", },
 		{

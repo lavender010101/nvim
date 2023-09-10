@@ -7,11 +7,22 @@ M.config = {
 		'weilbith/nvim-code-action-menu',
 		cmd = 'CodeActionMenu',
 	},
-	-- formatting
+	-- -- formatting
+	-- {
+	-- 	"jose-elias-alvarez/null-ls.nvim",
+	-- 	dependencies = { "nvim-lua/plenary.nvim" },
+	-- },
+
+	-- conform.nvim
 	{
-		"jose-elias-alvarez/null-ls.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		"stevearc/conform.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("config.lsp.conform")
+		end
 	},
+
+
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
