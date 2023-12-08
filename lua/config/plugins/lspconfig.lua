@@ -4,8 +4,8 @@ local F = {}
 
 M.config = {
 	{
-		'weilbith/nvim-code-action-menu',
-		cmd = 'CodeActionMenu',
+		"weilbith/nvim-code-action-menu",
+		cmd = "CodeActionMenu",
 	},
 	-- -- formatting
 	-- {
@@ -19,13 +19,12 @@ M.config = {
 		event = "VeryLazy",
 		config = function()
 			require("config.lsp.conform")
-		end
+		end,
 	},
 
-
 	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
 		dependencies = {
 			{
 				"folke/trouble.nvim",
@@ -34,22 +33,22 @@ M.config = {
 					action_keys = {
 						close = "<esc>",
 						previous = "u",
-						next = "e"
+						next = "e",
 					},
 				},
 			},
-			{ 'neovim/nvim-lspconfig' },
+			{ "neovim/nvim-lspconfig" },
 			{
-				'williamboman/mason.nvim',
+				"williamboman/mason.nvim",
 				build = function()
 					vim.cmd([[MasonInstall]])
 				end,
 			},
-			{ 'williamboman/mason-lspconfig.nvim' },
-			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ "williamboman/mason-lspconfig.nvim" },
+			{ "hrsh7th/cmp-nvim-lsp" },
 			{
-				'j-hui/fidget.nvim',
-				tag = "legacy"
+				"j-hui/fidget.nvim",
+				tag = "legacy",
 			},
 			"folke/neodev.nvim",
 			"ray-x/lsp_signature.nvim",
@@ -61,7 +60,7 @@ M.config = {
 		},
 
 		config = function()
-			local lsp = require('lsp-zero').preset({})
+			local lsp = require("lsp-zero").preset({})
 			M.lsp = lsp
 
 			-- lsp.ensure_installed({
@@ -101,10 +100,10 @@ M.config = {
 			end)
 
 			lsp.set_sign_icons({
-				error = '✘',
-				warn = '▲',
-				hint = '⚑',
-				info = '»'
+				error = "✘",
+				warn = "▲",
+				hint = "⚑",
+				info = "»",
 			})
 
 			lsp.set_server_config({
@@ -120,8 +119,7 @@ M.config = {
 				},
 			})
 
-
-			local lspconfig = require('lspconfig')
+			local lspconfig = require("lspconfig")
 
 			require("config.lsp.bashls").setup(lspconfig, lsp)
 			-- require("config.lsp.flutter").setup(lsp)
@@ -136,13 +134,10 @@ M.config = {
 			require("fidget").setup({})
 
 			local lsp_defaults = lspconfig.util.default_config
-			lsp_defaults.capabilities = vim.tbl_deep_extend(
-				'force',
-				lsp_defaults.capabilities,
-				require('cmp_nvim_lsp').default_capabilities()
-			)
+			lsp_defaults.capabilities =
+				vim.tbl_deep_extend("force", lsp_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-			require('nvim-dap-projects').search_project_config()
+			require("nvim-dap-projects").search_project_config()
 
 			F.configureDocAndSignature()
 			F.configureKeybinds()
@@ -167,7 +162,7 @@ M.config = {
 					end
 				end,
 			})
-		end
+		end,
 	},
 }
 
@@ -203,13 +198,11 @@ F.configureInlayHints = function()
 end
 
 F.configureDocAndSignature = function()
-	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-		vim.lsp.handlers.signature_help, {
-			silent = true,
-			focusable = false,
-			border = "rounded",
-		}
-	)
+	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+		silent = true,
+		focusable = false,
+		border = "rounded",
+	})
 	local group = vim.api.nvim_create_augroup("lsp_diagnostics_hold", { clear = true })
 	vim.api.nvim_create_autocmd({ "CursorHold" }, {
 		pattern = "*",
@@ -246,30 +239,29 @@ F.configureDocAndSignature = function()
 	-- lspsignature.setup(F.signature_config)
 end
 
-
 F.configureKeybinds = function()
-	vim.api.nvim_create_autocmd('LspAttach', {
-		desc = 'LSP actions',
+	vim.api.nvim_create_autocmd("LspAttach", {
+		desc = "LSP actions",
 		callback = function(event)
 			local opts = { buffer = event.buf, noremap = true, nowait = true }
 
-			vim.keymap.set('n', '<leader>h', vim.lsp.buf.hover, opts)
-			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-			vim.keymap.set('n', 'gD', ':tab sp<CR><cmd>lua vim.lsp.buf.definition()<cr>', opts)
-			vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-			vim.keymap.set('n', 'go', vim.lsp.buf.type_definition, opts)
-			vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-			vim.keymap.set('i', '<c-f>', vim.lsp.buf.signature_help, opts)
-			vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+			vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, opts)
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+			vim.keymap.set("n", "gD", ":tab sp<CR><cmd>lua vim.lsp.buf.definition()<cr>", opts)
+			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+			vim.keymap.set("n", "go", vim.lsp.buf.type_definition, opts)
+			vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+			vim.keymap.set("i", "<c-f>", vim.lsp.buf.signature_help, opts)
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 			-- vim.keymap.set({ 'n', 'x' }, '<leader>f', function() vim.lsp.buf.format({ async = true }) end, opts)
-			vim.keymap.set('n', '<leader>aw', vim.lsp.buf.code_action, opts)
-			vim.keymap.set('n', "<leader>,", vim.lsp.buf.code_action, opts)
+			vim.keymap.set("n", "<leader>aw", vim.lsp.buf.code_action, opts)
+			vim.keymap.set("n", "<leader>,", vim.lsp.buf.code_action, opts)
 			-- vim.keymap.set('x', '<leader>aw', vim.lsp.buf.range_code_action, opts)
 			-- vim.keymap.set('x', "<leader>,", vim.lsp.buf.range_code_action, opts)
-			vim.keymap.set('n', '<leader>t', ':Trouble<cr>', opts)
-			vim.keymap.set('n', '<leader>-', vim.diagnostic.goto_prev, opts)
-			vim.keymap.set('n', '<leader>=', vim.diagnostic.goto_next, opts)
-		end
+			vim.keymap.set("n", "<leader>t", ":Trouble<cr>", opts)
+			vim.keymap.set("n", "<leader>-", vim.diagnostic.goto_prev, opts)
+			vim.keymap.set("n", "<leader>=", vim.diagnostic.goto_next, opts)
+		end,
 	})
 end
 
