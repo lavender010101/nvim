@@ -20,7 +20,8 @@ function code_runner()
 	elseif vim.o.filetype == "python" then
 		vim.cmd("term time python %")
 	elseif vim.o.filetype == "go" then
-		vim.cmd("term go build % && time ./%<")
+		-- vim.cmd("term go build % && time ./%<")
+		vim.cmd("term time go run %")
 	elseif vim.o.filetype == "sh" then
 		vim.cmd("term time sh %")
 	end
