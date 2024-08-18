@@ -1,10 +1,7 @@
 require("conform").setup({
 	formatters_by_ft = {
 		c = { "clang_format" },
-		go = {
-			formatters = { "gofumpt", "goimports" },
-			run_all_formatters = true,
-		},
+		go = { "goimports", "gofumpt" },
 		html = { "prettierd" },
 		json = { "prettierd" },
 		jsonc = { "prettierd" },
@@ -18,16 +15,28 @@ require("conform").setup({
 		typescriptreact = { "prettierd" },
 		vue = { "prettierd" },
 		-- Formatters can also be specified with additional options
-		python = {
-			formatters = { "isort", "black" },
-			-- Run formatters one after another instead of stopping at the first success
-			-- run_all_formatters = true,
-			run_all_formatters = false,
-		},
+		-- python = {
+		-- 	formatters = { "isort", "black" },
+		-- 	-- Run formatters one after another instead of stopping at the first success
+		-- 	-- run_all_formatters = true,
+		-- 	run_all_formatters = false,
+		-- },
+		python = function(bufnr)
+			if require("conform").get_formatter_info("ruff_format", bufnr).available then
+				return { "ruff_format" }
+			else
+				return { "isort", "black" }
+			end
+		end,
 		zig = { "zigfmt" },
 		markdown = {
 			"prettierd",
 		},
+		-- Use the "*" filetype to run formatters on all filetypes.
+		["*"] = { "codespell" },
+		-- Use the "_" filetype to run formatters on filetypes that don't
+		-- have other formatters configured.
+		["_"] = { "trim_whitespace" },
 	},
 
 	format_on_save = {

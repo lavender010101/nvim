@@ -19,6 +19,8 @@ function code_runner()
 		vim.cmd("term javac % && time java %<")
 	elseif vim.o.filetype == "python" then
 		vim.cmd("term time python %")
+	elseif vim.o.filetype == "go" then
+		vim.cmd("term go build % && time ./%<")
 	elseif vim.o.filetype == "sh" then
 		vim.cmd("term time sh %")
 	end
