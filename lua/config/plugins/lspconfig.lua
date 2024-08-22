@@ -129,6 +129,7 @@ M.config = {
 			require("config.lsp.lua_ls").setup(lspconfig, lsp)
 			require("config.lsp.pyright").setup(lspconfig, lsp)
 			require("config.lsp.tsserver").setup(lspconfig, lsp)
+			require("config.lsp.gopls").setup(lspconfig, lsp)
 
 			lsp.setup()
 			require("fidget").setup({})

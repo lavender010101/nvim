@@ -62,6 +62,8 @@ require("lazy").setup({
 	-- require("config.plugins.winbar"),
 	require("config.plugins.window-management"),
 	require("config.plugins.yank"),
+	require("config.plugins.fittencode").config,
+
 	{ "dstein64/vim-startuptime" },
 }, {
 })

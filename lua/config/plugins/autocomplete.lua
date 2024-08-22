@@ -175,11 +175,12 @@ M.configfunc = function()
 		},
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
+			{ name = 'fittencode' },
 			{ name = "buffer" },
-			-- }, {
 			{ name = "path" },
 			{ name = "nvim_lua" },
-			{ name = "ultisnips" }
+			{ name = "ultisnips" },
+
 			-- { name = "calc" },
 			-- { name = "luasnip" },
 			-- { name = "friendly'},
@@ -238,6 +239,9 @@ M.configfunc = function()
 					end
 				end,
 			}),
+
+			-- fitten code
+
 		}),
 	})
 end
