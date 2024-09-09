@@ -7,7 +7,7 @@ keymap("n", "rr", ":lua code_runner()<CR>", opts)
 function code_runner()
 	vim.cmd("w")
 
-	vim.cmd("sp")
+	vim.cmd("vsp")
 	if vim.o.filetype == "lua" then
 		print(vim.o.filetype)
 	elseif vim.o.filetype == "c" then
