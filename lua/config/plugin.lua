@@ -63,6 +63,7 @@ require("lazy").setup({
 	require("config.plugins.window-management"),
 	require("config.plugins.yank"),
 	require("config.plugins.fittencode").config,
+	require("config.plugins.llm-nvim").config,
 
 	{ "dstein64/vim-startuptime" },
 }, {
