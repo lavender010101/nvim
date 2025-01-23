@@ -108,8 +108,8 @@ M.config = {
 							model = os.getenv("LLM_MODEL"),
 							-- api_type = "zhipu",
 							api_type = "openai",
-							-- args =
-							-- [[return {url, "-N", "-X", "POST", "-H", "Content-Type: application/json", "-H", authorization, "-d", vim.fn.json_encode(body)}]],
+							args =
+							[[return {url, "-N", "-X", "POST", "-H", "Content-Type: application/json", "-H", authorization, "-d", vim.fn.json_encode(body)}]],
 							exit_on_move = true,
 							enter_flexible_window = false,
 						},
