@@ -6,6 +6,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("n", "rr", ":lua code_runner()<CR>", opts)
 function code_runner()
 	vim.cmd("w")
+	-- vim.cmd("res -5")
 
 	vim.cmd("vsp")
 	if vim.o.filetype == "lua" then
@@ -15,7 +16,6 @@ function code_runner()
 	elseif vim.o.filetype == "cpp" then
 		vim.cmd("term g++ -std=c++11 % -Wall -o %< && time ./%<")
 	elseif vim.o.filetype == "java" then
-		vim.cmd("res -5")
 		vim.cmd("term javac % && time java %<")
 	elseif vim.o.filetype == "python" then
 		vim.cmd("term time python %")

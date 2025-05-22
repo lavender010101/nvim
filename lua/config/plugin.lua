@@ -14,11 +14,11 @@ vim.opt.rtp:prepend(lazypath)
 local lazy_cmd = require("lazy.view.config").commands
 local lazy_keys = {
 	{ cmd = "install", key = "i" },
-	{ cmd = "update",  key = "u" },
-	{ cmd = "sync",    key = "s" },
-	{ cmd = "clean",   key = "cl" },
-	{ cmd = "check",   key = "ch" },
-	{ cmd = "log",     key = "l" },
+	{ cmd = "update", key = "u" },
+	{ cmd = "sync", key = "s" },
+	{ cmd = "clean", key = "cl" },
+	{ cmd = "check", key = "ch" },
+	{ cmd = "log", key = "l" },
 	{ cmd = "restore", key = "rs" },
 	{ cmd = "profile", key = "p" },
 	{ cmd = "profile", key = "p" },
@@ -66,8 +66,7 @@ require("lazy").setup({
 	require("config.plugins.llm-nvim").config,
 
 	{ "dstein64/vim-startuptime" },
-}, {
-})
+}, {})
 
 require("plugin.vertical_cursor_movement")
 
