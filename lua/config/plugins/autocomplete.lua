@@ -26,7 +26,7 @@ M.config = {
 			lazy = false,
 			config = function()
 				require("lspkind").init()
-			end
+			end,
 		},
 
 		-- use ultisnips
@@ -34,10 +34,9 @@ M.config = {
 			"quangnguyen30192/cmp-nvim-ultisnips",
 			config = function()
 				-- optional call to setup (see customization section)
-				require("cmp_nvim_ultisnips").setup {}
+				require("cmp_nvim_ultisnips").setup({})
 			end,
 		},
-
 
 		--[[
 		{ "honza/vim-snippets", },
@@ -164,7 +163,7 @@ M.configfunc = function()
 			format = function(entry, vim_item)
 				local kind = lspkind.cmp_format({
 					mode = "symbol_text",
-					symbol_map = { Codeium = "", },
+					symbol_map = { Codeium = "" },
 				})(entry, vim_item)
 				local strings = vim.split(kind.kind, "%s", { trimempty = true })
 				kind.kind = " " .. (strings[1] or "") .. " "
@@ -175,7 +174,7 @@ M.configfunc = function()
 		},
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
-			{ name = 'fittencode' },
+			{ name = "fittencode" },
 			{ name = "buffer" },
 			{ name = "path" },
 			{ name = "nvim_lua" },
@@ -189,35 +188,35 @@ M.configfunc = function()
 		mapping = cmp.mapping.preset.insert({
 			-- ['<C-o>'] = cmp.mapping.complete(),
 			-- ['<C-e>'] = cmp.mapping.complete(),
-			["<c-j>"] = cmp.mapping(
-				function()
-					-- cmp_ultisnips_mappings.compose { "expand", "jump_forwards" } (function() end)
-					cmp_ultisnips_mappings.compose { "expand", "jump_forwards" } (function() end)
-				end,
-				{ "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
-			),
-			["<c-k>"] = cmp.mapping(
-				function(fallback)
-					-- cmp_ultisnips_mappings.jump_backwards(fallback)
-					cmp_ultisnips_mappings.jump_backwards(fallback)
-				end,
-				{ "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
-			),
-			['<c-f>'] = cmp.mapping({
+			["<c-j>"] = cmp.mapping(function()
+				-- cmp_ultisnips_mappings.compose { "expand", "jump_forwards" } (function() end)
+				cmp_ultisnips_mappings.compose({ "expand", "jump_forwards" })(function() end)
+			end, {
+				"i",
+				"s", --[[ "c" (to enable the mapping in command mode) ]]
+			}),
+			["<c-k>"] = cmp.mapping(function(fallback)
+				-- cmp_ultisnips_mappings.jump_backwards(fallback)
+				cmp_ultisnips_mappings.jump_backwards(fallback)
+			end, {
+				"i",
+				"s", --[[ "c" (to enable the mapping in command mode) ]]
+			}),
+			["<c-f>"] = cmp.mapping({
 				i = function(fallback)
 					cmp.close()
 					fallback()
-				end
+				end,
 			}),
 			-- ['<c-y>'] = cmp.mapping({ i = function(fallback) fallback() end }),
-			['<CR>'] = cmp.mapping({
+			["<CR>"] = cmp.mapping({
 				i = function(fallback)
 					if cmp.visible() and cmp.get_active_entry() then
 						cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
 					else
 						fallback()
 					end
-				end
+				end,
 			}),
 			["<Tab>"] = cmp.mapping({
 				i = function(fallback)
@@ -241,10 +240,8 @@ M.configfunc = function()
 			}),
 
 			-- fitten code
-
 		}),
 	})
 end
-
 
 return M
