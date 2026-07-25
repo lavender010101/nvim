@@ -1,4 +1,12 @@
 .DS_Store
 
 lua/config/machine_specific.lua
+
+# Coding Agents and IDE
 CLAUDE.md
+AGENTS.md
+.claude
+.opencode
+
+.vscode
+
